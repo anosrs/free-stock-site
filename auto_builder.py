@@ -333,8 +333,8 @@ def fetch_nexxjp_homepage_products() -> list:
                 final_amazon_url = url
                 cart_url = None
 
-            # トップページの並び順（上にあるものほど新しい）をタイムスタンプに反映
-            dt = now - timedelta(seconds=idx * 10)
+            # 巡回して最新在庫を感知した時刻をそのまま商品の検知時間とする
+            dt = now - timedelta(seconds=idx)
             
             price_numeric = 0
             if price:
@@ -358,7 +358,7 @@ def fetch_nexxjp_homepage_products() -> list:
                 "timestamp": int(dt.timestamp())
             }
             results.append(item)
-            print(f"  🔥 [NEXX TOP] {title} (ASIN: {asin})")
+            print(f"  🔥 [NEXX TOP] {title} (ASIN: {asin}) ({item['pub_date_short']})")
             
     except Exception as e:
         print(f"[Warning] fetch_nexxjp_homepage_products error: {e}")
