@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.title }} - 在庫・入荷履歴 | {{ site_name }}</title>
+    <meta name="description" content="{{ product.title }} の在庫状況・価格・入荷(リストック)履歴をチェック。ASIN: {{ product.asin }}">
+    <meta property="og:title" content="{{ product.title }}">
+    <meta property="og:description" content="参考価格: {{ product.price }} | ASIN: {{ product.asin }}">
+    <meta property="og:image" content="{{ product.image_url }}">
+    <meta property="og:type" content="article">
+    <style>
+        :root {
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --primary: #e60012;
+            --amazon-orange: #ff9900;
+            --border: #e2e8f0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg-color); color: var(--text-main); line-height: 1.6; }
+        header { background: #1a1a1a; color: #fff; padding: 15px 20px; text-align: center; border-bottom: 3px solid var(--primary); }
+        header h1 { font-size: 20px; font-weight: bold; }
+        header h1 a { color: #fff; text-decoration: none; }
+        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        .breadcrumb { font-size: 12px; color: var(--text-sub); margin-bottom: 15px; }
+        .breadcrumb a { color: var(--text-sub); text-decoration: none; }
+        .detail-card { background: var(--card-bg); border-radius: 8px; padding: 25px; border: 1px solid var(--border); }
+        .item-title { font-size: 20px; font-weight: bold; margin-bottom: 15px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+        .item-img-box { text-align: center; margin: 20px 0; }
+        .item-img-box img { max-width: 100%; max-height: 350px; object-fit: contain; }
+        .btn-box { display: flex; flex-direction: column; gap: 12px; margin: 25px 0; align-items: center; }
+        .btn { display: inline-block; width: 100%; max-width: 400px; text-align: center; padding: 14px 20px; border-radius: 6px; font-size: 16px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.1s; }
+        .btn:active { transform: translateY(1px); }
+        .btn-cart { background: var(--amazon-orange); color: #fff; }
+        .btn-amazon { background: #232f3e; color: #fff; }
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 25px; font-size: 14px; }
+        .info-table th, .info-table td { padding: 12px; border-bottom: 1px solid var(--border); text-align: left; }
+        .info-table th { background: #f8fafc; width: 30%; color: var(--text-sub); }
+        footer { text-align: center; padding: 30px 15px; font-size: 12px; color: var(--text-sub); border-top: 1px solid var(--border); margin-top: 40px; background: #fff; }
+    </style>
+
+    <!-- Schema.org 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": {{ product.title | tojson }},
+      "sku": {{ product.asin | tojson }},
+      "description": {{ (product.title ~ " 在庫・入荷(リストック)履歴をチェック。ASIN: " ~ product.asin) | tojson }},
+      "image": [{{ product.image_url | tojson }}],
+      "offers": {
+        "@type": "Offer",
+        "price": {{ product.price_numeric if product.price_numeric else 0 }},
+        "priceCurrency": "JPY",
+        "availability": "https://schema.org/InStock",
+        "url": {{ product.amazon_url | tojson }}
+      }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="../">{{ site_name }}</a></h1>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="../">HOME</a> &gt; <span>{{ product.title }}</span>
+        </div>
+
+        <div class="detail-card">
+            <h1 class="item-title">{{ product.title }}</h1>
+
+            <div class="item-img-box">
+                <img src="{{ product.image_url }}" alt="{{ product.title }}" onerror="this.src='https://via.placeholder.com/350x350?text=No+Image'">
+            </div>
+
+            <div class="btn-box">
+                {% if product.cart_url %}
+                <a href="{{ product.cart_url }}" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 Amazon カートに入れる</a>
+                {% endif %}
+                <a href="{{ product.amazon_url }}" target="_blank" rel="nofollow noopener" class="btn btn-amazon">👉 Amazonで商品詳細を見る</a>
+            </div>
+
+            <table class="info-table">
+                <tbody>
+                    <tr>
+                        <th>参考価格</th>
+                        <td style="font-weight: bold; color: var(--primary); font-size: 16px;">{{ product.price if product.price else '価格情報参照' }}</td>
+                    </tr>
+                    <tr>
+                        <th>ASIN</th>
+                        <td>{{ product.asin if product.asin else '不明' }}</td>
+                    </tr>
+                    <tr>
+                        <th>入荷検知日時</th>
+                        <td>{{ product.pub_date }}</td>
+                    </tr>
+                    <tr>
+                        <th>販売サイト</th>
+                        <td>Amazon.co.jp（詳細は商品ページ参照）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; {{ current_year }} {{ site_name }}. All rights reserved.</p>
+    </footer>
+</body>
+</html>

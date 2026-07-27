@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>{{ site_name }}</title>
+    <link>{{ site_url }}</link>
+    <description>Amazon・各種ストア最速在庫・予約開始速報</description>
+    <language>ja</language>
+    <lastBuildDate>{{ build_date }}</lastBuildDate>
+    {% for p in products %}
+    <item>
+        <title><![CDATA[{{ p.title }}]]></title>
+        <link>{{ site_url }}/product/{{ p.id }}.html</link>
+        <guid>{{ site_url }}/product/{{ p.id }}.html</guid>
+        <pubDate>{{ p.pub_date_rfc }}</pubDate>
+        <description><![CDATA[{{ p.price }} {{ p.title }}]]></description>
+    </item>
+    {% endfor %}
+</channel>
+</rss>

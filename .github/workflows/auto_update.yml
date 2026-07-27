@@ -1,0 +1,47 @@
+name: Auto Update Stock Site
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # GitHub Actionsで指定できる最速間隔(5分間隔)
+  workflow_dispatch:        # 手動実行ボタンも用意
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Auto Builder
+        env:
+          AMAZON_TAG: 'nekonoki-22'
+          SITE_URL: 'https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}'
+        run: |
+          python auto_builder.py
+
+      - name: Commit & Push Data Updates
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/products.json
+          git status
+          git diff-index --quiet HEAD || (git commit -m "Auto update products.json [skip ci]" && git push)
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: false
