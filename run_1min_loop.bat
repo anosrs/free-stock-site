@@ -15,16 +15,16 @@ echo ---------------------------------------------------
 echo [%date% %time%] 入荷情報を巡回中...
 py auto_builder.py
 
-git add .
-git commit -m "Auto update at %time%" >nul 2>&1
+git add index.html feed.xml sitemap.xml data/products.json product/
+git commit -m "Auto update at %date% %time%" >nul 2>&1
 if %errorlevel% equ 0 (
-    echo [%date% %time%] 新着商品を検出！ GitHubへ自動アップロード中...
-    git push -u origin main >nul 2>&1
-    echo アップロード完了！
+    echo [%date% %time%] ? サイトを最新の巡回日時で更新中... GitHubへ自動アップロード中...
+    git push -u origin main >nul 2>&1 || git push >nul 2>&1
+    echo ? アップロード完了！
 ) else (
-    echo 新着なし (更新不要)
+    echo 変更なし
 )
 
-echo 次の巡回まで 60 秒待機します...
+echo ? 次の巡回まで 60 秒待機します...
 timeout /t 60 /nobreak > nul
 goto loop
