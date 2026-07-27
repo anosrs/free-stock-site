@@ -273,12 +273,94 @@ def build_site(products: list):
     print(f"🎉 サイトビルド完了！ (総記事数: {len(products)} 件)")
 
 
+def fetch_nexxjp_homepage_products() -> list:
+    """nexxjp.com のトップページからリアルタイム『最新の在庫感知』アイテムを直接取得"""
+    print("[Fetch Homepage] https://nexxjp.com/")
+    results = []
+    try:
+        r = requests.get("https://nexxjp.com/", headers=HEADERS, timeout=8)
+        if r.status_code != 200:
+            return []
+        soup = BeautifulSoup(r.text, "html.parser")
+        
+        product_links = []
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            m = re.search(r"/product/(\d+)", href)
+            if m:
+                full_url = href if href.startswith("http") else f"https://nexxjp.com{href}"
+                if full_url not in product_links:
+                    product_links.append(full_url)
+
+        now = datetime.now(JST)
+
+        # 上位20件を順番に取得（並び順をそのまま保持）
+        for idx, url in enumerate(product_links[:20]):
+            details = fetch_nexxjp_details(url)
+            m_id = re.search(r"/(\d+)/?$", url)
+            product_id = m_id.group(1) if m_id else str(abs(hash(url)))[:8]
+            
+            asin = details.get("asin")
+            title = details.get("title") or f"商品 ({product_id})"
+            price = details.get("price")
+            image_url = details.get("image_url")
+            
+            if not image_url and asin:
+                image_url = f"https://images-na.ssl-images-amazon.com/images/P/{asin}.09.LZZZZZZZ"
+
+            if asin:
+                final_amazon_url = f"https://www.amazon.co.jp/dp/{asin}?tag={AMAZON_TAG}"
+                cart_url = f"https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1={asin}&tag={AMAZON_TAG}&Quantity.1=1"
+            else:
+                final_amazon_url = url
+                cart_url = None
+
+            # トップページの並び順（上にあるものほど新しい）をタイムスタンプに反映
+            dt = now - timedelta(seconds=idx * 10)
+            
+            price_numeric = 0
+            if price:
+                digits = re.sub(r"[^\d]", "", price)
+                if digits:
+                    price_numeric = int(digits)
+
+            item = {
+                "id": product_id,
+                "title": title,
+                "asin": asin,
+                "price": price,
+                "price_numeric": price_numeric,
+                "image_url": image_url,
+                "amazon_url": final_amazon_url,
+                "cart_url": cart_url,
+                "item_url": url,
+                "pub_date": dt.strftime("%Y-%m-%d %H:%M:%S"),
+                "pub_date_short": dt.strftime("%m/%d %H:%M"),
+                "pub_date_rfc": dt.strftime("%a, %d %b %Y %H:%M:%S +0900"),
+                "timestamp": int(dt.timestamp())
+            }
+            results.append(item)
+            print(f"  🔥 [NEXX TOP] {title} (ASIN: {asin})")
+            
+    except Exception as e:
+        print(f"[Warning] fetch_nexxjp_homepage_products error: {e}")
+    return results
+
+
 def main():
     existing_products = load_products()
-    product_map = {p["id"]: p for p in existing_products}
+    product_map = {}
+    for p in existing_products:
+        key = p.get("asin") or p["id"]
+        product_map[key] = p
 
-    updated_count = 0
+    # 1. NEXX JP トップページから最新在庫感知を取得 (優先度高)
+    homepage_items = fetch_nexxjp_homepage_products()
+    for item in homepage_items:
+        key = item.get("asin") or item["id"]
+        product_map[key] = item
 
+    # 2. 各種 RSS フィードから取得
     for feed_url in FEEDS:
         print(f"[Fetch] {feed_url}")
         parsed = feedparser.parse(feed_url)
@@ -287,16 +369,15 @@ def main():
             if not item:
                 continue
 
-            pid = item["id"]
-            if pid in product_map:
-                if item["timestamp"] > product_map[pid].get("timestamp", 0):
-                    product_map[pid] = item
-                    updated_count += 1
-                    print(f"  🔄 [UPDATE/RESTOCK] {item['title']} ({item['pub_date_short']})")
+            key = item.get("asin") or item["id"]
+
+            if key in product_map:
+                if item["timestamp"] > product_map[key].get("timestamp", 0):
+                    merged = dict(product_map[key])
+                    merged.update(item)
+                    product_map[key] = merged
             else:
-                product_map[pid] = item
-                updated_count += 1
-                print(f"  ✨ [NEW] {item['title']} ({item['pub_date_short']})")
+                product_map[key] = item
 
     all_products = list(product_map.values())
     all_products.sort(key=lambda x: x.get("timestamp", 0), reverse=True)
