@@ -233,8 +233,13 @@ def build_site(products: list):
     env = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
     now = datetime.now(JST)
     current_year = now.year
-    updated_at = now.strftime("%Y-%m-%d %H:%M")
     build_date = now.strftime("%a, %d %b %Y %H:%M:%S +0900")
+
+    # サイト上の「最終更新日時」は、一番新しい新着・再入荷商品の感知時間にする
+    if products and len(products) > 0 and products[0].get("pub_date"):
+        updated_at = products[0]["pub_date"][:16]  # YYYY-MM-DD HH:MM
+    else:
+        updated_at = now.strftime("%Y-%m-%d %H:%M")
 
     # 1. トップページ index.html
     tpl_index = env.get_template("index.html")
