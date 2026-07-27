@@ -13,8 +13,9 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 # ================== 設定 ==================
 SITE_NAME = "在庫・入荷速報チェッカー"
-SITE_URL = os.getenv("SITE_URL", "https://username.github.io/free-stock-site")
+SITE_URL = os.getenv("SITE_URL", "https://anosrs.github.io/free-stock-site")
 AMAZON_TAG = os.getenv("AMAZON_TAG", "nekonoki-22")
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "").strip()
 
 # 監視フィード一覧
 FEEDS = [
@@ -28,6 +29,18 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 # リポジトリ直下に出力（GitHub Pages が直接読み込めるように修正）
 DIST_DIR = BASE_DIR
 PRODUCT_DIST_DIR = os.path.join(DIST_DIR, "product")
+
+# .env ファイルがあれば自動で読み込む
+env_file = os.path.join(BASE_DIR, ".env")
+if os.path.exists(env_file):
+    with open(env_file, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ[k.strip()] = v.strip()
+                if k.strip() == "DISCORD_WEBHOOK_URL":
+                    DISCORD_WEBHOOK_URL = v.strip()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -347,6 +360,52 @@ def fetch_nexxjp_homepage_products() -> list:
     return results
 
 
+def send_discord_notification(item: dict):
+    """新着商品検出時に Discord Webhook へ通知を送る"""
+    if not DISCORD_WEBHOOK_URL:
+        return
+
+    title = item.get("title", "新着入荷商品")
+    price = item.get("price") or "価格確認中"
+    amazon_url = item.get("amazon_url", "")
+    cart_url = item.get("cart_url", "")
+    site_product_url = f"https://anosrs.github.io/free-stock-site/product/{item['id']}.html"
+    image_url = item.get("image_url", "")
+    pub_time = item.get("pub_date_short", "")
+
+    description = f"**価格**: `{price}`\n\n"
+    if amazon_url:
+        description += f"🛒 **[Amazon商品ページを開く]({amazon_url})**\n"
+    if cart_url:
+        description += f"⚡ **[1クリック カートに追加]({cart_url})**\n"
+    description += f"🌐 **[速報サイトで確認]({site_product_url})**"
+
+    embed = {
+        "title": f"🚨【入荷速報】{title}",
+        "url": amazon_url or site_product_url,
+        "description": description,
+        "color": 15158332,  # 赤/オレンジ
+        "footer": {"text": f"在庫・入荷速報チェッカー • {pub_time}"}
+    }
+
+    if image_url:
+        embed["thumbnail"] = {"url": image_url}
+
+    payload = {
+        "username": "在庫・入荷速報BOT",
+        "embeds": [embed]
+    }
+
+    try:
+        r = requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout=5)
+        if r.status_code in [200, 204]:
+            print(f"  🔔 [Discord通知完了] {title}")
+        else:
+            print(f"  ⚠️ [Discord通知失敗] Status Code: {r.status_code}")
+    except Exception as e:
+        print(f"  ⚠️ [Discord通知エラー] {e}")
+
+
 def main():
     existing_products = load_products()
     product_map = {}
@@ -354,11 +413,17 @@ def main():
         key = p.get("asin") or p["id"]
         product_map[key] = p
 
+    new_notified_keys = set()
+
     # 1. NEXX JP トップページから最新在庫感知を取得 (優先度高)
     homepage_items = fetch_nexxjp_homepage_products()
     for item in homepage_items:
         key = item.get("asin") or item["id"]
+        is_new = key not in product_map
         product_map[key] = item
+        if is_new and key not in new_notified_keys:
+            new_notified_keys.add(key)
+            send_discord_notification(item)
 
     # 2. 各種 RSS フィードから取得
     for feed_url in FEEDS:
@@ -378,6 +443,9 @@ def main():
                     product_map[key] = merged
             else:
                 product_map[key] = item
+                if key not in new_notified_keys:
+                    new_notified_keys.add(key)
+                    send_discord_notification(item)
 
     all_products = list(product_map.values())
     all_products.sort(key=lambda x: x.get("timestamp", 0), reverse=True)
