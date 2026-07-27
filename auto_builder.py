@@ -159,11 +159,18 @@ def parse_feed_entry(entry, feed_url: str) -> dict | None:
         final_amazon_url = link
         cart_url = None
 
-    # 日時フォーマット
-    now = datetime.now(JST)
-    pub_date_str = now.strftime("%Y-%m-%d %H:%M:%S")
-    pub_date_short = now.strftime("%m/%d %H:%M")
-    pub_date_rfc = now.strftime("%a, %d %b %Y %H:%M:%S +0900")
+    # 日時フォーマット (フィード内の実際の投稿日時を使用)
+    if entry.get("published_parsed"):
+        dt = datetime.fromtimestamp(time.mktime(entry["published_parsed"]), tz=timezone.utc).astimezone(JST)
+    elif entry.get("updated_parsed"):
+        dt = datetime.fromtimestamp(time.mktime(entry["updated_parsed"]), tz=timezone.utc).astimezone(JST)
+    else:
+        dt = datetime.now(JST)
+
+    pub_date_str = dt.strftime("%Y-%m-%d %H:%M:%S")
+    pub_date_short = dt.strftime("%m/%d %H:%M")
+    pub_date_rfc = dt.strftime("%a, %d %b %Y %H:%M:%S +0900")
+    timestamp = int(dt.timestamp())
 
     # 数値形式の価格
     price_numeric = 0
@@ -185,7 +192,7 @@ def parse_feed_entry(entry, feed_url: str) -> dict | None:
         "pub_date": pub_date_str,
         "pub_date_short": pub_date_short,
         "pub_date_rfc": pub_date_rfc,
-        "timestamp": int(now.timestamp())
+        "timestamp": timestamp
     }
 
 
@@ -268,10 +275,9 @@ def build_site(products: list):
 
 def main():
     existing_products = load_products()
-    existing_ids = {p["id"] for p in existing_products}
-    existing_asins = {p["asin"] for p in existing_products if p.get("asin")}
+    product_map = {p["id"]: p for p in existing_products}
 
-    new_items = []
+    updated_count = 0
 
     for feed_url in FEEDS:
         print(f"[Fetch] {feed_url}")
@@ -280,30 +286,24 @@ def main():
             item = parse_feed_entry(entry, feed_url)
             if not item:
                 continue
-            if item["id"] in existing_ids:
-                continue
-            if item.get("asin") and item["asin"] in existing_asins:
-                continue
 
-            existing_ids.add(item["id"])
-            if item.get("asin"):
-                existing_asins.add(item["asin"])
+            pid = item["id"]
+            if pid in product_map:
+                if item["timestamp"] > product_map[pid].get("timestamp", 0):
+                    product_map[pid] = item
+                    updated_count += 1
+                    print(f"  🔄 [UPDATE/RESTOCK] {item['title']} ({item['pub_date_short']})")
+            else:
+                product_map[pid] = item
+                updated_count += 1
+                print(f"  ✨ [NEW] {item['title']} ({item['pub_date_short']})")
 
-            new_items.append(item)
-            print(f"  ✨ [NEW] {item['title']} (ASIN: {item['asin']})")
+    all_products = list(product_map.values())
+    all_products.sort(key=lambda x: x.get("timestamp", 0), reverse=True)
+    all_products = all_products[:3000]
 
-    if new_items:
-        all_products = new_items + existing_products
-        # 降順ソート
-        all_products.sort(key=lambda x: x.get("timestamp", 0), reverse=True)
-        # 上限 3,000 件保持
-        all_products = all_products[:3000]
-
-        save_products(all_products)
-        build_site(all_products)
-    else:
-        print("新規入荷商品はありません。サイトを最新ビルドします。")
-        build_site(existing_products)
+    save_products(all_products)
+    build_site(all_products)
 
 
 if __name__ == "__main__":
