@@ -15,7 +15,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 SITE_NAME = "在庫・入荷速報チェッカー"
 SITE_URL = os.getenv("SITE_URL", "https://anosrs.github.io/free-stock-site")
 AMAZON_TAG = os.getenv("AMAZON_TAG", "nekonoki-22")
-DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "").strip()
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "https://discord.com/api/webhooks/1531328595799183491/PFvqwM1s23KBhz8aEZuXLVPwW6fdL8NvnPbYW7utQhpqpGkdqcnEJ3nHOwOy2n_XbglP").strip()
 
 # 監視フィード一覧
 FEEDS = [
