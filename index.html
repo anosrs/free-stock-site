@@ -27,19 +27,31 @@
         header p { font-size: 13px; color: #94a3b8; margin-top: 6px; }
         .container { max-width: 1040px; margin: 25px auto; padding: 0 16px; }
         .update-badge { display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: var(--primary); font-size: 13px; padding: 6px 14px; border-radius: 20px; font-weight: 700; border: 1px solid #fecaca; box-shadow: 0 2px 8px rgba(230,0,18,0.08); margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); border-color: #cbd5e1; }
-        .card-img-wrap { height: 210px; background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 12px; border-bottom: 1px solid #f1f5f9; }
-        .card-img-wrap img { max-height: 100%; max-width: 100%; object-fit: contain; }
-        .card-body { padding: 18px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-title { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 68px; color: var(--text-title) !important; letter-spacing: -0.01em; }
-        .card-title a { color: var(--text-title) !important; text-decoration: none; transition: color 0.15s; }
-        .card-title a:visited { color: var(--text-title) !important; }
-        .card-title a:hover { color: var(--primary) !important; }
-        .card-meta { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; margin-bottom: 14px; padding-top: 4px; border-top: 1px dashed #f1f5f9; }
-        .price { font-size: 20px; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; }
-        .time { font-size: 12px; color: var(--text-sub); font-weight: 600; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
+        
+        /* セクション分割カードデザイン */
+        .card { background: var(--card-bg); border-radius: 14px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; box-shadow: 0 4px 14px rgba(0,0,0,0.04); }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.1); border-color: #cbd5e1; }
+        
+        /* 1. 画像エリア */
+        .card-img-sec { height: 210px; background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 12px; border-bottom: 2px solid #f1f5f9; }
+        .card-img-sec img { max-height: 100%; max-width: 100%; object-fit: contain; }
+
+        /* 2. タイトルエリア (区分けされた背景ボックス) */
+        .card-title-sec { padding: 14px 16px; background: #f8fafc; border-bottom: 1px solid #e2e8f0; min-height: 82px; display: flex; align-items: center; }
+        .card-title { font-size: 14px; font-weight: 700; line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: #0f172a !important; letter-spacing: -0.01em; margin: 0; }
+        .card-title a { color: #0f172a !important; text-decoration: none; }
+        .card-title a:hover { color: var(--primary) !important; text-decoration: underline; }
+
+        /* 3. 価格＆日時エリア (区分けされた価格ボックス) */
+        .card-meta-sec { padding: 12px 16px; background: #ffffff; border-bottom: 1px solid #f1f5f9; flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        .price-label { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+        .price-row { display: flex; justify-content: space-between; align-items: baseline; }
+        .price { font-size: 21px; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; }
+        .time { font-size: 11px; color: #475569; font-weight: 600; background: #f1f5f9; padding: 3px 8px; border-radius: 4px; border: 1px solid #e2e8f0; }
+
+        /* 4. ボタンエリア */
+        .card-btn-sec { padding: 14px 16px; background: #ffffff; }
         .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
         .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 6px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.15s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
         .btn:hover { opacity: 0.92; transform: translateY(-1px); }
@@ -55,24 +67,36 @@
     </header>
 
     <div class="container">
-        <div class="update-badge">⚡ 最終更新: 2026-07-28 10:54</div>
+        <div class="update-badge">⚡ 最終更新: 2026-07-28 10:56</div>
         
         <div class="grid">
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/44289.html">
                         <img src="https://nexxjp.com/img/B087G1161T.jpg" alt="HGUC 機動戦士Zガンダム PMX-003 ジ・オ 1/144スケール 色分け済みプラモデル" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/44289.html">HGUC 機動戦士Zガンダム PMX-003 ジ・オ 1/144スケール 色分け済みプラモデル</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">価格参照</span>
                         <span class="time">07/28 10:03</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B087G1161T&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -83,19 +107,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/42841.html">
                         <img src="https://nexxjp.com/img/B0G1QZR681.jpg" alt="タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-17 スターター メテオドラグーン3-70J" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/42841.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-17 スターター メテオドラグーン3-70J</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,300</span>
                         <span class="time">07/28 09:32</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0G1QZR681&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -106,19 +142,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/40667.html">
                         <img src="https://nexxjp.com/img/B0GYCFN1NV.jpg" alt="TAMASHII NATIONS METAL STRUCTURE 解体匠機 RX-93 νガンダム (再販版) 全高約370mm ABS&ダイキャスト&PVC製 塗装済み可動フィギュア" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/40667.html">TAMASHII NATIONS METAL STRUCTURE 解体匠機 RX-93 νガンダム (再販版) 全高約370mm ABS&ダイキャスト&PVC製 塗装済み可動フィギュア</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥132,000</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GYCFN1NV&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -129,19 +177,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/44290.html">
                         <img src="https://nexxjp.com/img/B0GN6HYVP6.jpg" alt="バンダイ(BANDAI) ONE PIECEカードゲーム スタートデッキ 赤 モンキー・D・ルフィ【ST-31】（2個セット）" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/44290.html">バンダイ(BANDAI) ONE PIECEカードゲーム スタートデッキ 赤 モンキー・D・ルフィ【ST-31】（2個セット）</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,100</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GN6HYVP6&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -152,19 +212,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45630.html">
                         <img src="https://nexxjp.com/img/B0H4LQV29F.jpg" alt="【Amazon.co.jp限定】KISS N TELL 【Limited Edition Ver.】 - aespa (メガジャケ付)" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45630.html">【Amazon.co.jp限定】KISS N TELL 【Limited Edition Ver.】 - aespa (メガジャケ付)</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥3,850</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H4LQV29F&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -175,19 +247,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45391.html">
                         <img src="https://nexxjp.com/img/B0H3691W67.jpg" alt="SPRiNG（スプリング）2026年9月号【表紙：M!LK】" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45391.html">SPRiNG（スプリング）2026年9月号【表紙：M!LK】</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,830</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H3691W67&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -198,19 +282,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/42846.html">
                         <img src="https://nexxjp.com/img/B0GVWF6QJ6.jpg" alt="タカラトミー(TAKARA TOMY) ディズニー･ロルカナ･TCG 日本語版 ブースターパック WILDS UNKNOWN 未知なる彼方へ! BOX" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/42846.html">タカラトミー(TAKARA TOMY) ディズニー･ロルカナ･TCG 日本語版 ブースターパック WILDS UNKNOWN 未知なる彼方へ! BOX</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥5,280</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GVWF6QJ6&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -221,19 +317,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/44508.html">
                         <img src="https://nexxjp.com/img/B0C52YJQBC.jpg" alt="タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-10 エクストリームスタジアム" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/44508.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-10 エクストリームスタジアム</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,750</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0C52YJQBC&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -244,19 +352,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45295.html">
                         <img src="https://nexxjp.com/img/B0GWZQLS5S.jpg" alt="【メーカー特典あり】sakanaction [重量盤アナログ] [2LP] - サカナクション （メーカー特典 ： sakanaction・特製ステッカー　付） [Analog]" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45295.html">【メーカー特典あり】sakanaction [重量盤アナログ] [2LP] - サカナクション （メーカー特典 ： sakanaction・特製ステッカー　付） [Analog]</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥6,600</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GWZQLS5S&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -267,19 +387,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/42571.html">
                         <img src="https://nexxjp.com/img/B0GWKWBXH3.jpg" alt="タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-17 ランダムブースター Vol.10" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/42571.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-17 ランダムブースター Vol.10</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,601</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GWKWBXH3&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -290,19 +422,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45614.html">
                         <img src="https://nexxjp.com/img/B0016GJWKG.jpg" alt="トンボ鉛筆 蛍光ペン 蛍コート80 黄色 WA-SC91" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45614.html">トンボ鉛筆 蛍光ペン 蛍コート80 黄色 WA-SC91</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥58</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0016GJWKG&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -313,19 +457,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/24955.html">
                         <img src="https://nexxjp.com/img/B0FQTKQNFZ.jpg" alt="BANDAI SPIRITS(バンダイ スピリッツ) 30MS オプションパーツセット27(ミネルヴァコスチューム)[カラーA] 色分け済みプラモデル" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/24955.html">BANDAI SPIRITS(バンダイ スピリッツ) 30MS オプションパーツセット27(ミネルヴァコスチューム)[カラーA] 色分け済みプラモデル</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,200</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0FQTKQNFZ&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -336,19 +492,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/41150.html">
                         <img src="https://nexxjp.com/img/B0GMF7QZQB.jpg" alt="タカラトミー(TAKARA TOMY) CX-16 スタートダッシュセットC" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/41150.html">タカラトミー(TAKARA TOMY) CX-16 スタートダッシュセットC</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥5,651</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GMF7QZQB&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -359,19 +527,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/43635.html">
                         <img src="https://nexxjp.com/img/B0H4PK66SN.jpg" alt="タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 スターター ストームペガシス 3-70RA" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/43635.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 スターター ストームペガシス 3-70RA</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,620</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H4PK66SN&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -382,19 +562,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45244.html">
                         <img src="https://nexxjp.com/img/B0H8ZLKDF5.jpg" alt="Vジャンプ (10月号)" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45244.html">Vジャンプ (10月号)</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥740</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H8ZLKDF5&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -405,19 +597,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45585.html">
                         <img src="https://nexxjp.com/img/4798642320.jpg" alt="ガンダムカードゲーム 1stアニバーサリー アーカイブ (HOBBY JAPAN MOOK)" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45585.html">ガンダムカードゲーム 1stアニバーサリー アーカイブ (HOBBY JAPAN MOOK)</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,860</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=4798642320&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -428,19 +632,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/41231.html">
                         <img src="https://nexxjp.com/img/B0CV7HF3W6.jpg" alt="BEYBLADE X ベイブレードX UX-01 スターター ドランバスター 1-60A" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/41231.html">BEYBLADE X ベイブレードX UX-01 スターター ドランバスター 1-60A</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,980</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0CV7HF3W6&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -451,19 +667,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45593.html">
                         <img src="https://nexxjp.com/img/B0GP9YPPTB.jpg" alt="ポケモンカードゲーム コレクションファイルプレミアム メガレックウザ" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45593.html">ポケモンカードゲーム コレクションファイルプレミアム メガレックウザ</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,420</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GP9YPPTB&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -474,19 +702,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45176.html">
                         <img src="https://nexxjp.com/img/B0D6MZB1VF.jpg" alt="BEYBLADE X ベイブレードX BX-34 スターター コバルトドラグーン 2-60C" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45176.html">BEYBLADE X ベイブレードX BX-34 スターター コバルトドラグーン 2-60C</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,321</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0D6MZB1VF&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -497,19 +737,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/3304.html">
                         <img src="https://nexxjp.com/img/B0D5XJNWGF.jpg" alt="BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ザクⅡ F型 ソラリ機 (復讐のレクイエム) 1/144スケール 色分け済みプラモデル" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/3304.html">BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ザクⅡ F型 ソラリ機 (復讐のレクイエム) 1/144スケール 色分け済みプラモデル</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,090</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0D5XJNWGF&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -520,19 +772,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/33968.html">
                         <img src="https://nexxjp.com/img/408884100X.jpg" alt="ONE PIECE CHOPPER’s 1 (ジャンプコミックス)" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/33968.html">ONE PIECE CHOPPER’s 1 (ジャンプコミックス)</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,540</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=408884100X&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -543,19 +807,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45235.html">
                         <img src="https://nexxjp.com/img/B0H6D14S3P.jpg" alt="ボンボンドロップシール ちいかわ 【4個セット】 I モモンガ・古本屋・みんな ニコニコ・みんな ポーズ S8542929 S8542937 S8542953 S8542961" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45235.html">ボンボンドロップシール ちいかわ 【4個セット】 I モモンガ・古本屋・みんな ニコニコ・みんな ポーズ S8542929 S8542937 S8542953 S8542961</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,200</span>
                         <span class="time">07/28 09:27</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6D14S3P&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -566,19 +842,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45573.html">
                         <img src="https://nexxjp.com/img/B0FX587TKD.jpg" alt="【純正品】DualSense ワイヤレスコントローラー(CFI-ZCT2J)" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45573.html">【純正品】DualSense ワイヤレスコントローラー(CFI-ZCT2J)</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥10,737</span>
                         <span class="time">07/28 09:00</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0FX587TKD&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -589,19 +877,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/44570.html">
                         <img src="https://nexxjp.com/img/B0H6LPTK77.jpg" alt="ボンボンドロップシール リラックマ 【2個セット】 ごゆるり・なかよし S8817650 S8817669" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/44570.html">ボンボンドロップシール リラックマ 【2個セット】 ごゆるり・なかよし S8817650 S8817669</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,100</span>
                         <span class="time">07/28 07:54</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6LPTK77&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -612,19 +912,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45287.html">
                         <img src="https://nexxjp.com/img/B0H6LFZV46.jpg" alt="ボンボンドロップシール トーマス 【2個セット】 ぼうけん・なかまたち S8817448 S8817456" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45287.html">ボンボンドロップシール トーマス 【2個セット】 ぼうけん・なかまたち S8817448 S8817456</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,100</span>
                         <span class="time">07/28 04:41</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6LFZV46&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -635,19 +947,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45355.html">
                         <img src="https://nexxjp.com/img/B0H6DB9KTN.jpg" alt="ボンボンドロップシール ちいかわ 【2個セット】 J モモンガ・古本屋 S8542929 S8542937" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45355.html">ボンボンドロップシール ちいかわ 【2個セット】 J モモンガ・古本屋 S8542929 S8542937</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,100</span>
                         <span class="time">07/28 00:53</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6DB9KTN&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -658,19 +982,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/44591.html">
                         <img src="https://nexxjp.com/img/B0H6Y6RCFC.jpg" alt="週刊少年ジャンプ (33号)" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/44591.html">週刊少年ジャンプ (33号)</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥340</span>
                         <span class="time">07/28 00:38</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6Y6RCFC&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -681,19 +1017,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/39040.html">
                         <img src="https://nexxjp.com/img/B0GMF1DTFB.jpg" alt="タカラトミー(TAKARA TOMY) CX-13 スターター バハムートブリッツBK1-50I" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/39040.html">タカラトミー(TAKARA TOMY) CX-13 スターター バハムートブリッツBK1-50I</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,200</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GMF1DTFB&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -704,19 +1052,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/44193.html">
                         <img src="https://nexxjp.com/img/B0GX8TQS3L.jpg" alt="富士フイルム(FUJIFILM) インスタントカメラ チェキWIDE instax WIDE 400 BLK INS WIDE 400 BLK" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/44193.html">富士フイルム(FUJIFILM) インスタントカメラ チェキWIDE instax WIDE 400 BLK INS WIDE 400 BLK</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥23,100</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GX8TQS3L&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -727,19 +1087,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45071.html">
                         <img src="https://nexxjp.com/img/B0H4PT2W8R.jpg" alt="[バンダイ(BANDAI)] DIGIVICE Ver.REVIVAL 八神太一カラー 対象年齢 8 才以上 デジモンアドベンチャー（DIGIMON ADVENTURE）" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45071.html">[バンダイ(BANDAI)] DIGIVICE Ver.REVIVAL 八神太一カラー 対象年齢 8 才以上 デジモンアドベンチャー（DIGIMON ADVENTURE）</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥4,378</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H4PT2W8R&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -750,19 +1122,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/43005.html">
                         <img src="https://nexxjp.com/img/B0GXCRBL5J.jpg" alt="ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/43005.html">ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥7,216</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GXCRBL5J&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -773,19 +1157,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/42922.html">
                         <img src="https://nexxjp.com/img/B0CMZSRJ3Q.jpg" alt="BEYBLADE X ベイブレードX BX-23 スターター フェニックスウイング 9-60GF 金属" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/42922.html">BEYBLADE X ベイブレードX BX-23 スターター フェニックスウイング 9-60GF 金属</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,420</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0CMZSRJ3Q&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -796,19 +1192,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/4080.html">
                         <img src="https://nexxjp.com/img/B0BNPKP5PQ.jpg" alt="HGAW 機動新世紀ガンダムX GX-9900 ガンダムエックス 1/144スケール 色分け済みプラモデル キット本体・ホイルシール・ホログラムシール・組立説明書" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/4080.html">HGAW 機動新世紀ガンダムX GX-9900 ガンダムエックス 1/144スケール 色分け済みプラモデル キット本体・ホイルシール・ホログラムシール・組立説明書</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,200</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0BNPKP5PQ&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -819,19 +1227,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/42073.html">
                         <img src="https://nexxjp.com/img/B0GS4F6977.jpg" alt="タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-19 スターター バレットグリフォンH" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/42073.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-19 スターター バレットグリフォンH</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">価格参照</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GS4F6977&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -842,19 +1262,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/4089.html">
                         <img src="https://nexxjp.com/img/B0D5XRF771.jpg" alt="BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ガンダム EX (復讐のレクイエム) 1/144スケール 色分け済みプラモデル" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/4089.html">BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ガンダム EX (復讐のレクイエム) 1/144スケール 色分け済みプラモデル</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,090</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0D5XRF771&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -865,19 +1297,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/30014.html">
                         <img src="https://nexxjp.com/img/B07R3YS8R2.jpg" alt="BANDAI SPIRITS(バンダイ スピリッツ) RG 機動戦士ガンダム 逆襲のシャア νガンダム 1/144スケール 色分け済みプラモデル" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/30014.html">BANDAI SPIRITS(バンダイ スピリッツ) RG 機動戦士ガンダム 逆襲のシャア νガンダム 1/144スケール 色分け済みプラモデル</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥4,950</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B07R3YS8R2&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -888,19 +1332,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/136.html">
                         <img src="https://nexxjp.com/img/B0CKYL9MCP.jpg" alt="PlayStation 5 デジタル・エディション(CFI-2000B01)" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/136.html">PlayStation 5 デジタル・エディション(CFI-2000B01)</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥72,980</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0CKYL9MCP&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -911,19 +1367,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45386.html">
                         <img src="https://nexxjp.com/img/B0H6LRYLK4.jpg" alt="ボンボンドロップシール パウ・パトロール 【2個セット】 バッジ・フルーツ S8816697 S8816700" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45386.html">ボンボンドロップシール パウ・パトロール 【2個セット】 バッジ・フルーツ S8816697 S8816700</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,100</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6LRYLK4&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -934,19 +1402,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/14227.html">
                         <img src="https://nexxjp.com/img/B0DXDVBCL1.jpg" alt="BANDAI SPIRITS(バンダイ スピリッツ) MGSD 機動戦士ガンダム 水星の魔女 ガンダムエアリアル 色分け済みプラモデル" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/14227.html">BANDAI SPIRITS(バンダイ スピリッツ) MGSD 機動戦士ガンダム 水星の魔女 ガンダムエアリアル 色分け済みプラモデル</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥4,290</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DXDVBCL1&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -957,19 +1437,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/43378.html">
                         <img src="https://nexxjp.com/img/B0GN4ZXL4V.jpg" alt="バンダイ(BANDAI) ONE PIECEカードゲーム スタートデッキ 緑 ロロノア・ゾロ【ST-32】（2個セット）" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/43378.html">バンダイ(BANDAI) ONE PIECEカードゲーム スタートデッキ 緑 ロロノア・ゾロ【ST-32】（2個セット）</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,100</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GN4ZXL4V&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -980,19 +1472,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/43636.html">
                         <img src="https://nexxjp.com/img/B0H4PPV8MR.jpg" alt="タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-20 スターター グローリーワルキューレ LF" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/43636.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-20 スターター グローリーワルキューレ LF</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,701</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H4PPV8MR&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -1003,19 +1507,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/22605.html">
                         <img src="https://nexxjp.com/img/B0DGFZND26.jpg" alt="BEYBLADE X ベイブレードX UX-08 スターター シルバーウルフ 3-80FB" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/22605.html">BEYBLADE X ベイブレードX UX-08 スターター シルバーウルフ 3-80FB</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥2,080</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DGFZND26&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -1026,19 +1542,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/43637.html">
                         <img src="https://nexxjp.com/img/B0H4PM8QCF.jpg" alt="タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-50 ランダムブースターVol.11" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/43637.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-50 ランダムブースターVol.11</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥1,601</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H4PM8QCF&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -1049,19 +1577,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/37853.html">
                         <img src="https://nexxjp.com/img/B0GQY2RB2F.jpg" alt=""BANDAI SPIRITS(バンダイ スピリッツ) プラコロ たんけんボックス 01【BOX】（1BOX:12個入り）"" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/37853.html">"BANDAI SPIRITS(バンダイ スピリッツ) プラコロ たんけんボックス 01【BOX】（1BOX:12個入り）"</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥4,620</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GQY2RB2F&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -1072,19 +1612,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/44231.html">
                         <img src="https://nexxjp.com/img/B0GP928YDZ.jpg" alt="ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ BOX" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/44231.html">ポケモンカードゲーム MEGA 拡張パック ストームエメラルダ BOX</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥6,006</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GP928YDZ&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -1095,19 +1647,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/22726369.html">
                         <img src="https://tokkacat.com/wp-content/uploads/2026/07/01MKUOLsA5L._SL500_-7.gif" alt="バンダイ公認 ONE PIECE CARD GAME 4th ANNIVERSARY COMPLETE GUIDE (Vジャンプブックス(書籍))" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/22726369.html">バンダイ公認 ONE PIECE CARD GAME 4th ANNIVERSARY COMPLETE GUIDE (Vジャンプブックス(書籍))</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">価格情報なし</span>
                         <span class="time">07/27 14:45</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=4087798380&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -1118,19 +1682,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/43005.html">
                         <img src="None" alt="ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/43005.html">ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">価格参照</span>
                         <span class="time">07/26 02:06</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://nexxjp.com/product/43005" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 Amazon</a>
@@ -1141,19 +1717,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45452.html">
                         <img src="https://nexxjp.com/img/B0HBCZLJ2R.jpg" alt="コロコロコミック 2026年 09 月号 [雑誌]" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45452.html">コロコロコミック 2026年 09 月号 [雑誌]</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥730</span>
                         <span class="time">07/25 17:14</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0HBCZLJ2R&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
@@ -1164,19 +1752,31 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/45452.html">
                         <img src="None" alt="コロコロコミック 2026年 09 月号 [雑誌]" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/45452.html">コロコロコミック 2026年 09 月号 [雑誌]</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">価格参照</span>
                         <span class="time">07/25 17:14</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://nexxjp.com/product/45452" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 Amazon</a>
@@ -1187,65 +1787,101 @@
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
-                    <a href="product/38058342.html">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
+                    <a href="product/11236317.html">
                         <img src="https://tokkacat.com/wp-content/uploads/2026/07/41bSWXFipBL._SL500_.jpg" alt="トンボ鉛筆 消しゴム MONO モノPE01 10個 オリジナルパッケージ入り JCA-071AZ" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
-                        <a href="product/38058342.html">トンボ鉛筆 消しゴム MONO モノPE01 10個 オリジナルパッケージ入り JCA-071AZ</a>
+                        <a href="product/11236317.html">トンボ鉛筆 消しゴム MONO モノPE01 10個 オリジナルパッケージ入り JCA-071AZ</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥667</span>
                         <span class="time">07/25 15:16</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H25VG544&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
                         
-                        <a href="product/38058342.html" class="btn btn-detail">詳細をチェック</a>
+                        <a href="product/11236317.html" class="btn btn-detail">詳細をチェック</a>
                     </div>
                 </div>
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
-                    <a href="product/20228576.html">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
+                    <a href="product/71409107.html">
                         <img src="https://tokkacat.com/wp-content/uploads/2026/07/41QEnw-Je5L._SL500_.jpg" alt="ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
-                        <a href="product/20228576.html">ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装</a>
+                        <a href="product/71409107.html">ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥282</span>
                         <span class="time">07/24 18:17</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B09NZLNB28&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
                         
-                        <a href="product/20228576.html" class="btn btn-detail">詳細をチェック</a>
+                        <a href="product/71409107.html" class="btn btn-detail">詳細をチェック</a>
                     </div>
                 </div>
             </div>
             
             <div class="card">
-                <div class="card-img-wrap">
+                <!-- 1. 画像エリア -->
+                <div class="card-img-sec">
                     <a href="product/85860559.html">
                         <img src="https://tokkacat.com/wp-content/uploads/2026/07/01MKUOLsA5L._SL500_-8.gif" alt="ガンダムエース 2026年9月号 No.289" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
-                <div class="card-body">
+                
+                <!-- 2. タイトルエリア -->
+                <div class="card-title-sec">
                     <div class="card-title">
                         <a href="product/85860559.html">ガンダムエース 2026年9月号 No.289</a>
                     </div>
-                    <div class="card-meta">
+                </div>
+                
+                <!-- 3. 価格＆日時エリア -->
+                <div class="card-meta-sec">
+                    <div class="price-label">参考価格</div>
+                    <div class="price-row">
                         <span class="price">¥870</span>
                         <span class="time">07/24 01:35</span>
                     </div>
+                </div>
+
+                <!-- 4. ボタンエリア -->
+                <div class="card-btn-sec">
                     <div class="btn-group">
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6JCD5CQ&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
