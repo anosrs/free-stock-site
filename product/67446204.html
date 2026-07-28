@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ product.title }} - 在庫・入荷履歴 | {{ site_name }}</title>
-    <meta name="description" content="{{ product.title }} の在庫状況・価格・入荷(リストック)履歴をチェック。ASIN: {{ product.asin }}">
-    <meta property="og:title" content="{{ product.title }}">
-    <meta property="og:description" content="参考価格: {{ product.price }} | ASIN: {{ product.asin }}">
-    <meta property="og:image" content="{{ product.image_url }}">
+    <title>ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装 - 在庫・入荷履歴 | 在庫・入荷速報チェッカー</title>
+    <meta name="description" content="ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装 の在庫状況・価格・入荷(リストック)履歴をチェック。ASIN: B09NZLNB28">
+    <meta property="og:title" content="ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装">
+    <meta property="og:description" content="参考価格: ¥282 | ASIN: B09NZLNB28">
+    <meta property="og:image" content="https://tokkacat.com/wp-content/uploads/2026/07/41QEnw-Je5L._SL500_.jpg">
     <meta property="og:type" content="article">
     <style>
         :root {
@@ -49,67 +49,67 @@
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": {{ product.title | tojson }},
-      "sku": {{ product.asin | tojson }},
-      "description": {{ (product.title ~ " 在庫・入荷(リストック)履歴をチェック。ASIN: " ~ product.asin) | tojson }},
-      "image": [{{ product.image_url | tojson }}],
+      "name": "\u30cf\u30f3\u30c7\u30a3\u30fb\u30af\u30e9\u30a6\u30f3 \u68b1\u5305\u7528\u30af\u30e9\u30d5\u30c8\u7c98\u7740\u30c6\u30fc\u30d7 \uff15\uff10\uff4d\uff4d\u00d7\uff15\uff10\uff4d \u68b1\u5305 \u5f15\u8d8a\u3057 \u7269\u6d41 \u5b85\u914d\u4fbf \u5c0f\u5305\u88c5",
+      "sku": "B09NZLNB28",
+      "description": "\u30cf\u30f3\u30c7\u30a3\u30fb\u30af\u30e9\u30a6\u30f3 \u68b1\u5305\u7528\u30af\u30e9\u30d5\u30c8\u7c98\u7740\u30c6\u30fc\u30d7 \uff15\uff10\uff4d\uff4d\u00d7\uff15\uff10\uff4d \u68b1\u5305 \u5f15\u8d8a\u3057 \u7269\u6d41 \u5b85\u914d\u4fbf \u5c0f\u5305\u88c5 \u5728\u5eab\u30fb\u5165\u8377(\u30ea\u30b9\u30c8\u30c3\u30af)\u5c65\u6b74\u3092\u30c1\u30a7\u30c3\u30af\u3002ASIN: B09NZLNB28",
+      "image": ["https://tokkacat.com/wp-content/uploads/2026/07/41QEnw-Je5L._SL500_.jpg"],
       "offers": {
         "@type": "Offer",
-        "price": {{ product.price_numeric if product.price_numeric else 0 }},
+        "price": 282,
         "priceCurrency": "JPY",
         "availability": "https://schema.org/InStock",
-        "url": {{ product.amazon_url | tojson }}
+        "url": "https://www.amazon.co.jp/dp/B09NZLNB28?tag=nekonoki-22"
       }
     }
     </script>
 </head>
 <body>
     <header>
-        <h1><a href="../">{{ site_name }}</a></h1>
+        <h1><a href="../">在庫・入荷速報チェッカー</a></h1>
     </header>
 
     <div class="container">
         <div class="breadcrumb">
-            <a href="../">TOP</a> &gt; <span>{{ product.title }}</span>
+            <a href="../">TOP</a> &gt; <span>ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装</span>
         </div>
 
         <div class="detail-card">
-            <h1 class="item-title">{{ product.title }}</h1>
+            <h1 class="item-title">ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装</h1>
 
             <div class="item-img-box">
-                <img src="{{ product.image_url }}" alt="{{ product.title }}" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image'">
+                <img src="https://tokkacat.com/wp-content/uploads/2026/07/41QEnw-Je5L._SL500_.jpg" alt="ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image'">
             </div>
 
             <div class="btn-box">
-                {% if product.cart_url %}
-                <a href="{{ product.cart_url }}" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 Amazon 1クリックカート追加</a>
-                {% endif %}
-                <a href="{{ product.amazon_url }}" target="_blank" rel="nofollow noopener" class="btn btn-amazon">🛒 Amazon商品ページで確認</a>
+                
+                <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B09NZLNB28&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 Amazon 1クリックカート追加</a>
+                
+                <a href="https://www.amazon.co.jp/dp/B09NZLNB28?tag=nekonoki-22" target="_blank" rel="nofollow noopener" class="btn btn-amazon">🛒 Amazon商品ページで確認</a>
             </div>
 
             <table class="info-table">
                 <tr>
                     <th>参考価格</th>
-                    <td><span class="price-text">{{ product.price if product.price else '価格情報参照' }}</span></td>
+                    <td><span class="price-text">¥282</span></td>
                 </tr>
                 <tr>
                     <th>ASIN (商品コード)</th>
-                    <td><code>{{ product.asin if product.asin else 'N/A' }}</code></td>
+                    <td><code>B09NZLNB28</code></td>
                 </tr>
                 <tr>
                     <th>最新入荷検知日時</th>
-                    <td>{{ product.pub_date }}</td>
+                    <td>2026-07-24 18:17:23</td>
                 </tr>
                 <tr>
                     <th>公式・取扱ストア</th>
-                    <td><a href="{{ product.amazon_url }}" target="_blank" rel="nofollow noopener">Amazon.co.jp で探す</a></td>
+                    <td><a href="https://www.amazon.co.jp/dp/B09NZLNB28?tag=nekonoki-22" target="_blank" rel="nofollow noopener">Amazon.co.jp で探す</a></td>
                 </tr>
             </table>
         </div>
     </div>
 
     <footer>
-        <p>&copy; {{ current_year }} {{ site_name }} - 最速入荷速報</p>
+        <p>&copy; 2026 在庫・入荷速報チェッカー - 最速入荷速報</p>
     </footer>
 </body>
 </html>
