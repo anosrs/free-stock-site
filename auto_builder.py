@@ -419,11 +419,21 @@ def main():
     homepage_items = fetch_nexxjp_homepage_products()
     for item in homepage_items:
         key = item.get("asin") or item["id"]
-        is_new = key not in product_map
-        product_map[key] = item
-        if is_new and key not in new_notified_keys:
-            new_notified_keys.add(key)
-            send_discord_notification(item)
+        if key in product_map:
+            # 既存商品は元の通知日時・投稿日時をそのまま保護固定
+            orig_item = product_map[key]
+            merged = dict(orig_item)
+            merged.update(item)
+            merged["pub_date"] = orig_item.get("pub_date", item["pub_date"])
+            merged["pub_date_short"] = orig_item.get("pub_date_short", item["pub_date_short"])
+            merged["pub_date_rfc"] = orig_item.get("pub_date_rfc", item["pub_date_rfc"])
+            merged["timestamp"] = orig_item.get("timestamp", item["timestamp"])
+            product_map[key] = merged
+        else:
+            product_map[key] = item
+            if key not in new_notified_keys:
+                new_notified_keys.add(key)
+                send_discord_notification(item)
 
     # 2. 各種 RSS フィードから取得
     for feed_url in FEEDS:
@@ -437,10 +447,14 @@ def main():
             key = item.get("asin") or item["id"]
 
             if key in product_map:
-                if item["timestamp"] > product_map[key].get("timestamp", 0):
-                    merged = dict(product_map[key])
-                    merged.update(item)
-                    product_map[key] = merged
+                orig_item = product_map[key]
+                merged = dict(orig_item)
+                merged.update(item)
+                merged["pub_date"] = orig_item.get("pub_date", item["pub_date"])
+                merged["pub_date_short"] = orig_item.get("pub_date_short", item["pub_date_short"])
+                merged["pub_date_rfc"] = orig_item.get("pub_date_rfc", item["pub_date_rfc"])
+                merged["timestamp"] = orig_item.get("timestamp", item["timestamp"])
+                product_map[key] = merged
             else:
                 product_map[key] = item
                 if key not in new_notified_keys:
