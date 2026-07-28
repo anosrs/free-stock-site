@@ -11,35 +11,37 @@
     <meta property="og:type" content="article">
     <style>
         :root {
-            --bg-color: #f4f6f9;
+            --bg-color: #f8fafc;
             --card-bg: #ffffff;
-            --text-main: #333333;
-            --text-sub: #666666;
+            --text-title: #0f172a;
+            --text-sub: #64748b;
             --primary: #e60012;
             --amazon-orange: #ff9900;
             --border: #e2e8f0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg-color); color: var(--text-main); line-height: 1.6; }
-        header { background: #1a1a1a; color: #fff; padding: 15px 20px; text-align: center; border-bottom: 3px solid var(--primary); }
-        header h1 { font-size: 20px; font-weight: bold; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg-color); color: #334155; line-height: 1.6; }
+        header { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; padding: 18px 20px; text-align: center; border-bottom: 3px solid var(--primary); }
+        header h1 { font-size: 20px; font-weight: 800; }
         header h1 a { color: #fff; text-decoration: none; }
-        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
-        .breadcrumb { font-size: 12px; color: var(--text-sub); margin-bottom: 15px; }
-        .breadcrumb a { color: var(--text-sub); text-decoration: none; }
-        .detail-card { background: var(--card-bg); border-radius: 8px; padding: 25px; border: 1px solid var(--border); }
-        .item-title { font-size: 20px; font-weight: bold; margin-bottom: 15px; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
-        .item-img-box { text-align: center; margin: 20px 0; }
-        .item-img-box img { max-width: 100%; max-height: 350px; object-fit: contain; }
-        .btn-box { display: flex; flex-direction: column; gap: 12px; margin: 25px 0; align-items: center; }
-        .btn { display: inline-block; width: 100%; max-width: 400px; text-align: center; padding: 14px 20px; border-radius: 6px; font-size: 16px; font-weight: bold; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.1s; }
-        .btn:active { transform: translateY(1px); }
-        .btn-cart { background: var(--amazon-orange); color: #fff; }
-        .btn-amazon { background: #232f3e; color: #fff; }
-        .info-table { width: 100%; border-collapse: collapse; margin-top: 25px; font-size: 14px; }
-        .info-table th, .info-table td { padding: 12px; border-bottom: 1px solid var(--border); text-align: left; }
-        .info-table th { background: #f8fafc; width: 30%; color: var(--text-sub); }
-        footer { text-align: center; padding: 30px 15px; font-size: 12px; color: var(--text-sub); border-top: 1px solid var(--border); margin-top: 40px; background: #fff; }
+        .container { max-width: 840px; margin: 25px auto; padding: 0 16px; }
+        .breadcrumb { font-size: 13px; color: var(--text-sub); margin-bottom: 18px; }
+        .breadcrumb a { color: var(--text-sub); text-decoration: none; font-weight: 600; }
+        .breadcrumb a:hover { color: var(--primary); }
+        .detail-card { background: var(--card-bg); border-radius: 12px; padding: 30px; border: 1px solid var(--border); box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+        .item-title { font-size: 22px; font-weight: 800; color: var(--text-title); margin-bottom: 20px; border-bottom: 2px solid #f1f5f9; padding-bottom: 15px; line-height: 1.4; }
+        .item-img-box { text-align: center; margin: 25px 0; background: #fff; padding: 15px; border-radius: 8px; }
+        .item-img-box img { max-width: 100%; max-height: 380px; object-fit: contain; }
+        .btn-box { display: flex; flex-direction: column; gap: 14px; margin: 30px 0; align-items: center; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; width: 100%; max-width: 420px; text-align: center; padding: 15px 24px; border-radius: 10px; font-size: 17px; font-weight: 800; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.08); transition: all 0.15s ease; }
+        .btn:hover { transform: translateY(-2px); opacity: 0.94; }
+        .btn-cart { background: linear-gradient(135deg, #ff9900, #f08800); color: #fff; }
+        .btn-amazon { background: #0f172a; color: #fff; }
+        .info-table { width: 100%; border-collapse: collapse; margin-top: 30px; font-size: 14px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border); }
+        .info-table th, .info-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); text-align: left; }
+        .info-table th { background: #f8fafc; width: 28%; color: var(--text-sub); font-weight: 700; }
+        .price-text { font-size: 24px; font-weight: 800; color: var(--primary); }
+        footer { text-align: center; padding: 35px 15px; font-size: 13px; color: var(--text-sub); border-top: 1px solid var(--border); margin-top: 50px; background: #fff; }
     </style>
 
     <!-- Schema.org 構造化データ (JSON-LD) -->
@@ -68,48 +70,46 @@
 
     <div class="container">
         <div class="breadcrumb">
-            <a href="../">HOME</a> &gt; <span>BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ザクⅡ F型 ソラリ機 (復讐のレクイエム) 1/144スケール 色分け済みプラモデル</span>
+            <a href="../">TOP</a> &gt; <span>BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ザクⅡ F型 ソラリ機 (復讐のレクイエム) 1/144スケール 色分け済みプラモデル</span>
         </div>
 
         <div class="detail-card">
             <h1 class="item-title">BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ザクⅡ F型 ソラリ機 (復讐のレクイエム) 1/144スケール 色分け済みプラモデル</h1>
 
             <div class="item-img-box">
-                <img src="https://nexxjp.com/img/B0D5XJNWGF.jpg" alt="BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ザクⅡ F型 ソラリ機 (復讐のレクイエム) 1/144スケール 色分け済みプラモデル" onerror="this.src='https://via.placeholder.com/350x350?text=No+Image'">
+                <img src="https://nexxjp.com/img/B0D5XJNWGF.jpg" alt="BANDAI SPIRITS(バンダイスピリッツ) HG 機動戦士ガンダム 復讐のレクイエム ザクⅡ F型 ソラリ機 (復讐のレクイエム) 1/144スケール 色分け済みプラモデル" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image'">
             </div>
 
             <div class="btn-box">
                 
-                <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0D5XJNWGF&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 Amazon カートに入れる</a>
+                <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0D5XJNWGF&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 Amazon 1クリックカート追加</a>
                 
-                <a href="https://www.amazon.co.jp/dp/B0D5XJNWGF?tag=nekonoki-22" target="_blank" rel="nofollow noopener" class="btn btn-amazon">👉 Amazonで商品詳細を見る</a>
+                <a href="https://www.amazon.co.jp/dp/B0D5XJNWGF?tag=nekonoki-22" target="_blank" rel="nofollow noopener" class="btn btn-amazon">🛒 Amazon商品ページで確認</a>
             </div>
 
             <table class="info-table">
-                <tbody>
-                    <tr>
-                        <th>参考価格</th>
-                        <td style="font-weight: bold; color: var(--primary); font-size: 16px;">¥2,090</td>
-                    </tr>
-                    <tr>
-                        <th>ASIN</th>
-                        <td>B0D5XJNWGF</td>
-                    </tr>
-                    <tr>
-                        <th>入荷検知日時</th>
-                        <td>2026-07-28 09:27:16</td>
-                    </tr>
-                    <tr>
-                        <th>販売サイト</th>
-                        <td>Amazon.co.jp（詳細は商品ページ参照）</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th>参考価格</th>
+                    <td><span class="price-text">¥2,090</span></td>
+                </tr>
+                <tr>
+                    <th>ASIN (商品コード)</th>
+                    <td><code>B0D5XJNWGF</code></td>
+                </tr>
+                <tr>
+                    <th>最新入荷検知日時</th>
+                    <td>2026-07-28 09:27:16</td>
+                </tr>
+                <tr>
+                    <th>公式・取扱ストア</th>
+                    <td><a href="https://www.amazon.co.jp/dp/B0D5XJNWGF?tag=nekonoki-22" target="_blank" rel="nofollow noopener">Amazon.co.jp で探す</a></td>
+                </tr>
             </table>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 在庫・入荷速報チェッカー. All rights reserved.</p>
+        <p>&copy; 2026 在庫・入荷速報チェッカー - 最速入荷速報</p>
     </footer>
 </body>
 </html>

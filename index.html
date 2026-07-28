@@ -11,41 +11,41 @@
     <link rel="alternate" type="application/rss+xml" title="在庫・入荷速報チェッカー RSS Feed" href="feed.xml" />
     <style>
         :root {
-            --bg-color: #f4f6f9;
+            --bg-color: #f8fafc;
             --card-bg: #ffffff;
-            --text-main: #333333;
-            --text-sub: #666666;
+            --text-title: #0f172a;
+            --text-sub: #64748b;
             --primary: #e60012;
             --amazon-orange: #ff9900;
             --border: #e2e8f0;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg-color); color: var(--text-main); line-height: 1.5; }
-        header { background: #1a1a1a; color: #fff; padding: 15px 20px; text-align: center; border-bottom: 3px solid var(--primary); }
-        header h1 { font-size: 22px; font-weight: bold; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: var(--bg-color); color: #334155; line-height: 1.5; }
+        header { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; padding: 20px 20px; text-align: center; border-bottom: 3px solid var(--primary); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        header h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.02em; }
         header h1 a { color: #fff; text-decoration: none; }
-        header p { font-size: 12px; color: #aaa; margin-top: 4px; }
-        .container { max-width: 1000px; margin: 20px auto; padding: 0 15px; }
-        .update-badge { display: inline-block; background: var(--primary); color: #fff; font-size: 12px; padding: 3px 8px; border-radius: 3px; font-weight: bold; margin-bottom: 15px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
-        .card { background: var(--card-bg); border-radius: 8px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
-        .card:hover { transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.08); }
-        .card-img-wrap { height: 200px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 10px; border-bottom: 1px solid #f0f0f0; }
+        header p { font-size: 13px; color: #94a3b8; margin-top: 6px; }
+        .container { max-width: 1040px; margin: 25px auto; padding: 0 16px; }
+        .update-badge { display: inline-flex; align-items: center; gap: 6px; background: #ffffff; color: var(--primary); font-size: 13px; padding: 6px 14px; border-radius: 20px; font-weight: 700; border: 1px solid #fecaca; box-shadow: 0 2px 8px rgba(230,0,18,0.08); margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); border-color: #cbd5e1; }
+        .card-img-wrap { height: 210px; background: #ffffff; display: flex; align-items: center; justify-content: center; padding: 12px; border-bottom: 1px solid #f1f5f9; }
         .card-img-wrap img { max-height: 100%; max-width: 100%; object-fit: contain; }
-        .card-body { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .card-title { font-size: 14px; font-weight: 700; line-height: 1.45; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 68px; background: #111111; color: #ffffff !important; padding: 10px 12px; border-radius: 6px; letter-spacing: -0.01em; }
-        .card-title a { color: #ffffff !important; text-decoration: none; }
-        .card-title a:visited { color: #ffffff !important; }
-        .card-title a:hover { color: #ff9900 !important; text-decoration: underline; }
-        .card-meta { display: flex; justify-content: space-between; align-items: center; font-size: 13px; margin-bottom: 12px; }
-        .price { font-size: 18px; font-weight: bold; color: var(--primary); }
-        .time { font-size: 11px; color: #333333; font-weight: 600; }
-        .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-        .btn { display: inline-block; text-align: center; padding: 9px 5px; border-radius: 4px; font-size: 12px; font-weight: bold; text-decoration: none; transition: opacity 0.2s; }
-        .btn:hover { opacity: 0.88; }
-        .btn-cart { background: var(--amazon-orange); color: #fff; }
-        .btn-detail { background: #333; color: #fff; }
-        footer { text-align: center; padding: 30px 15px; font-size: 12px; color: var(--text-sub); border-top: 1px solid var(--border); margin-top: 40px; background: #fff; }
+        .card-body { padding: 18px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-title { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 68px; color: var(--text-title) !important; letter-spacing: -0.01em; }
+        .card-title a { color: var(--text-title) !important; text-decoration: none; transition: color 0.15s; }
+        .card-title a:visited { color: var(--text-title) !important; }
+        .card-title a:hover { color: var(--primary) !important; }
+        .card-meta { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; margin-bottom: 14px; padding-top: 4px; border-top: 1px dashed #f1f5f9; }
+        .price { font-size: 20px; font-weight: 800; color: var(--primary); letter-spacing: -0.02em; }
+        .time { font-size: 12px; color: var(--text-sub); font-weight: 600; background: #f1f5f9; padding: 2px 8px; border-radius: 4px; }
+        .btn-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 6px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; transition: all 0.15s ease; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .btn:hover { opacity: 0.92; transform: translateY(-1px); }
+        .btn-cart { background: linear-gradient(135deg, #ff9900, #f08800); color: #ffffff; }
+        .btn-detail { background: #1e293b; color: #ffffff; }
+        footer { text-align: center; padding: 35px 15px; font-size: 13px; color: var(--text-sub); border-top: 1px solid var(--border); margin-top: 50px; background: #ffffff; }
     </style>
 </head>
 <body>
@@ -55,7 +55,7 @@
     </header>
 
     <div class="container">
-        <div class="update-badge">⚡ 最終更新: 2026-07-28 10:45</div>
+        <div class="update-badge">⚡ 最終更新: 2026-07-28 10:46</div>
         
         <div class="grid">
             
@@ -70,7 +70,7 @@
                         <a href="product/44289.html">HGUC 機動戦士Zガンダム PMX-003 ジ・オ 1/144スケール 色分け済みプラモデル</a>
                     </div>
                     <div class="card-meta">
-                        <span class="price">価格情報参照</span>
+                        <span class="price">価格参照</span>
                         <span class="time">07/28 10:03</span>
                     </div>
                     <div class="btn-group">
@@ -829,7 +829,7 @@
                         <a href="product/42073.html">タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX UX-19 スターター バレットグリフォンH</a>
                     </div>
                     <div class="card-meta">
-                        <span class="price">価格情報参照</span>
+                        <span class="price">価格参照</span>
                         <span class="time">07/27 14:45</span>
                     </div>
                     <div class="btn-group">
@@ -1128,7 +1128,7 @@
                         <a href="product/43005.html">ポケモンカードゲーム MEGA 拡張パック 30th CELEBRATION BOX</a>
                     </div>
                     <div class="card-meta">
-                        <span class="price">価格情報参照</span>
+                        <span class="price">価格参照</span>
                         <span class="time">07/26 02:06</span>
                     </div>
                     <div class="btn-group">
@@ -1174,7 +1174,7 @@
                         <a href="product/45452.html">コロコロコミック 2026年 09 月号 [雑誌]</a>
                     </div>
                     <div class="card-meta">
-                        <span class="price">価格情報参照</span>
+                        <span class="price">価格参照</span>
                         <span class="time">07/25 17:14</span>
                     </div>
                     <div class="btn-group">
@@ -1188,13 +1188,13 @@
             
             <div class="card">
                 <div class="card-img-wrap">
-                    <a href="product/81290596.html">
+                    <a href="product/41631653.html">
                         <img src="https://tokkacat.com/wp-content/uploads/2026/07/41bSWXFipBL._SL500_.jpg" alt="トンボ鉛筆 消しゴム MONO モノPE01 10個 オリジナルパッケージ入り JCA-071AZ" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
                 <div class="card-body">
                     <div class="card-title">
-                        <a href="product/81290596.html">トンボ鉛筆 消しゴム MONO モノPE01 10個 オリジナルパッケージ入り JCA-071AZ</a>
+                        <a href="product/41631653.html">トンボ鉛筆 消しゴム MONO モノPE01 10個 オリジナルパッケージ入り JCA-071AZ</a>
                     </div>
                     <div class="card-meta">
                         <span class="price">¥667</span>
@@ -1204,20 +1204,20 @@
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H25VG544&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
                         
-                        <a href="product/81290596.html" class="btn btn-detail">詳細をチェック</a>
+                        <a href="product/41631653.html" class="btn btn-detail">詳細をチェック</a>
                     </div>
                 </div>
             </div>
             
             <div class="card">
                 <div class="card-img-wrap">
-                    <a href="product/49297500.html">
+                    <a href="product/27778691.html">
                         <img src="https://tokkacat.com/wp-content/uploads/2026/07/41QEnw-Je5L._SL500_.jpg" alt="ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装" loading="lazy" onerror="this.src='https://via.placeholder.com/200x200?text=No+Image'">
                     </a>
                 </div>
                 <div class="card-body">
                     <div class="card-title">
-                        <a href="product/49297500.html">ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装</a>
+                        <a href="product/27778691.html">ハンディ・クラウン 梱包用クラフト粘着テープ ５０ｍｍ×５０ｍ 梱包 引越し 物流 宅配便 小包装</a>
                     </div>
                     <div class="card-meta">
                         <span class="price">¥282</span>
@@ -1227,7 +1227,7 @@
                         
                         <a href="https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B09NZLNB28&tag=nekonoki-22&Quantity.1=1" target="_blank" rel="nofollow noopener" class="btn btn-cart">🛒 カート投入</a>
                         
-                        <a href="product/49297500.html" class="btn btn-detail">詳細をチェック</a>
+                        <a href="product/27778691.html" class="btn btn-detail">詳細をチェック</a>
                     </div>
                 </div>
             </div>
@@ -1259,8 +1259,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 在庫・入荷速報チェッカー. All rights reserved.</p>
-        <p style="margin-top: 5px; font-size: 11px;">※当サイトはAmazonアソシエイトおよび各種アフィリエイトプログラムに参加しています。</p>
+        <p>&copy; 2026 在庫・入荷速報チェッカー - 最速入荷速報</p>
     </footer>
 </body>
 </html>
