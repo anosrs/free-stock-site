@@ -2,8 +2,11 @@ name: Auto Update Stock Site
 
 on:
   schedule:
-    - cron: '*/5 * * * *'   # GitHub Actionsで指定できる最速間隔(5分間隔)
-  workflow_dispatch:        # 手動実行ボタンも用意
+    - cron: '*/5 * * * *'   # 5分間隔自動巡回
+  workflow_dispatch:        # 手動実行ボタン
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -28,20 +31,14 @@ jobs:
         env:
           AMAZON_TAG: 'nekonoki-22'
           SITE_URL: 'https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}'
+          DISCORD_WEBHOOK_URL: 'https://discord.com/api/webhooks/1531328595799183491/PFvqwM1s23KBhz8aEZuXLVPwW6fdL8NvnPbYW7utQhpqpGkdqcnEJ3nHOwOy2n_XbglP'
         run: |
           python auto_builder.py
 
-      - name: Commit & Push Data Updates
+      - name: Commit & Push Changes
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/products.json
+          git add .
           git status
-          git diff-index --quiet HEAD || (git commit -m "Auto update products.json [skip ci]" && git push)
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          keep_files: false
+          git diff-index --quiet HEAD || (git commit -m "Auto update site data and HTML [skip ci]" && git push)
