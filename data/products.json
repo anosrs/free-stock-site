@@ -1,5 +1,35 @@
 [
   {
+    "id": "40840",
+    "title": "KIOXIA(キオクシア)【日本製】microSD 32GB 高耐久 ドラレコ・監視カメラ対応 UHS-I U3 V30 Class10 microSDHC 4K対応 最大読出速度100MB/s 最大書込50MB/s 国内サポート正規品 メーカー保証2年 KLMHB032G",
+    "asin": "B0DW8L82YF",
+    "price": "¥6,602",
+    "price_numeric": 6602,
+    "image_url": "https://nexxjp.com/img/B0DW8L82YF.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0DW8L82YF?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DW8L82YF&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/40840",
+    "pub_date": "2026-07-29 09:04:29",
+    "pub_date_short": "07/29 09:04",
+    "pub_date_rfc": "Wed, 29 Jul 2026 09:04:29 +0900",
+    "timestamp": 1785283469
+  },
+  {
+    "id": "45707",
+    "title": "KIOXIA(キオクシア)【日本製】SDカード 256GB SDXC UHS-I U3 V30 Class10 最大読出速度100MB/s 最大書込速度50MB/s 4K対応 国内正規品 メーカー保証5年 KLNEB256G",
+    "asin": "B0CSJMN8ZK",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0CSJMN8ZK.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0CSJMN8ZK?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0CSJMN8ZK&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/45707",
+    "pub_date": "2026-07-29 09:04:28",
+    "pub_date_short": "07/29 09:04",
+    "pub_date_rfc": "Wed, 29 Jul 2026 09:04:28 +0900",
+    "timestamp": 1785283468
+  },
+  {
     "id": "11338",
     "title": "Pokémon GO Plus +（ポケモン ゴー プラスプラス） (【Amazon.co.jp限定】オリジナルデザイン マイクロファイバークロス 同梱)",
     "asin": "B0CLYCCG1N",
@@ -45,7 +75,7 @@
     "timestamp": 1785263231
   },
   {
-    "id": "33656254",
+    "id": "30635943",
     "title": "BEYBLADE X ベイブレードX BX-41 ラバーカスタムグリップ ガンメタVer.",
     "asin": "B0DWS96T4F",
     "price": "価格情報なし",
@@ -105,7 +135,7 @@
     "timestamp": 1785216898
   },
   {
-    "id": "30864228",
+    "id": "60852338",
     "title": "BEYBLADE X ベイブレードX BX-42 ラバーカスタムグリップ ブルーVer.",
     "asin": "B0DWSB1VDQ",
     "price": "¥2,081",
@@ -270,7 +300,7 @@
     "timestamp": 1785198446
   },
   {
-    "id": "63535390",
+    "id": "55633002",
     "title": "トンボ鉛筆 蛍光ペン 蛍コート80 黄色 WA-SC91",
     "asin": "B0016GJWKG",
     "price": "¥58",
