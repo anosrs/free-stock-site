@@ -1,5 +1,35 @@
 [
   {
+    "id": "25060",
+    "title": "商品 (25060)",
+    "asin": null,
+    "price": null,
+    "price_numeric": 0,
+    "image_url": null,
+    "amazon_url": "https://nexxjp.com/product/25060",
+    "cart_url": null,
+    "item_url": "https://nexxjp.com/product/25060",
+    "pub_date": "2026-07-29 22:31:14",
+    "pub_date_short": "07/29 22:31",
+    "pub_date_rfc": "Wed, 29 Jul 2026 22:31:14 +0900",
+    "timestamp": 1785331874
+  },
+  {
+    "id": "38620",
+    "title": "商品 (38620)",
+    "asin": null,
+    "price": null,
+    "price_numeric": 0,
+    "image_url": null,
+    "amazon_url": "https://nexxjp.com/product/38620",
+    "cart_url": null,
+    "item_url": "https://nexxjp.com/product/38620",
+    "pub_date": "2026-07-29 22:31:08",
+    "pub_date_short": "07/29 22:31",
+    "pub_date_rfc": "Wed, 29 Jul 2026 22:31:08 +0900",
+    "timestamp": 1785331868
+  },
+  {
     "id": "3639",
     "title": "富士フイルム(FUJIFILM) インスタントカメラ チェキWIDE instax WIDE 400 INS WIDE 400",
     "asin": "B0D7Z4541Q",
@@ -135,7 +165,7 @@
     "timestamp": 1785263231
   },
   {
-    "id": "31494387",
+    "id": "30862329",
     "title": "BEYBLADE X ベイブレードX BX-41 ラバーカスタムグリップ ガンメタVer.",
     "asin": "B0DWS96T4F",
     "price": "価格情報なし",
@@ -195,7 +225,7 @@
     "timestamp": 1785216898
   },
   {
-    "id": "84634870",
+    "id": "15136762",
     "title": "BEYBLADE X ベイブレードX BX-42 ラバーカスタムグリップ ブルーVer.",
     "asin": "B0DWSB1VDQ",
     "price": "¥2,081",
@@ -360,7 +390,7 @@
     "timestamp": 1785198446
   },
   {
-    "id": "47929396",
+    "id": "92087691",
     "title": "トンボ鉛筆 蛍光ペン 蛍コート80 黄色 WA-SC91",
     "asin": "B0016GJWKG",
     "price": "¥58",
