@@ -1,5 +1,35 @@
 [
   {
+    "id": "6642",
+    "title": "【純正品】ディスクドライブ(CFI-ZDD1J) PlayStation 5",
+    "asin": "B0CKYKPKD3",
+    "price": "¥11,859",
+    "price_numeric": 11859,
+    "image_url": "https://nexxjp.com/img/B0CKYKPKD3.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0CKYKPKD3?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0CKYKPKD3&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/6642",
+    "pub_date": "2026-07-30 20:24:49",
+    "pub_date_short": "07/30 20:24",
+    "pub_date_rfc": "Thu, 30 Jul 2026 20:24:49 +0900",
+    "timestamp": 1785410689
+  },
+  {
+    "id": "82271374",
+    "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
+    "asin": "B0CY4H1TJD",
+    "price": "¥1,950",
+    "price_numeric": 1950,
+    "image_url": "https://tokkacat.com/wp-content/uploads/2026/07/41EpzV3j9xL._SL500_.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0CY4H1TJD?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0CY4H1TJD&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://tokkacat.com/b0cy4h1tjd/",
+    "pub_date": "2026-07-30 20:19:13",
+    "pub_date_short": "07/30 20:19",
+    "pub_date_rfc": "Thu, 30 Jul 2026 20:19:13 +0900",
+    "timestamp": 1785410353
+  },
+  {
     "id": "26299",
     "title": "タカラトミー(TAKARA TOMY) ポケットモンスター ポケモン ポケなで モンスターボール",
     "asin": "B0FNM5CR25",
@@ -210,7 +240,7 @@
     "timestamp": 1785263231
   },
   {
-    "id": "30167671",
+    "id": "78781031",
     "title": "BEYBLADE X ベイブレードX BX-41 ラバーカスタムグリップ ガンメタVer.",
     "asin": "B0DWS96T4F",
     "price": "価格情報なし",
@@ -270,7 +300,7 @@
     "timestamp": 1785216898
   },
   {
-    "id": "80687087",
+    "id": "30122727",
     "title": "BEYBLADE X ベイブレードX BX-42 ラバーカスタムグリップ ブルーVer.",
     "asin": "B0DWSB1VDQ",
     "price": "¥2,081",
@@ -435,7 +465,7 @@
     "timestamp": 1785198446
   },
   {
-    "id": "56301942",
+    "id": "97600298",
     "title": "トンボ鉛筆 蛍光ペン 蛍コート80 黄色 WA-SC91",
     "asin": "B0016GJWKG",
     "price": "¥58",
@@ -510,15 +540,15 @@
     "timestamp": 1785198441
   },
   {
-    "id": "15105511",
+    "id": "59122904",
     "title": "ガンダムカードゲーム 1stアニバーサリー アーカイブ (HOBBY JAPAN MOOK)",
     "asin": "4798642320",
     "price": "価格情報なし",
     "price_numeric": 0,
-    "image_url": "https://tokkacat.com/wp-content/uploads/2026/07/51ccoEtAXvL._SL500_-1.jpg",
+    "image_url": "https://tokkacat.com/wp-content/uploads/2026/07/51ccoEtAXvL._SL500_-2.jpg",
     "amazon_url": "https://www.amazon.co.jp/dp/4798642320?tag=nekonoki-22",
     "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=4798642320&tag=nekonoki-22&Quantity.1=1",
-    "item_url": "https://tokkacat.com/4798642320-3/",
+    "item_url": "https://tokkacat.com/4798642320-4/",
     "pub_date": "2026-07-28 09:27:20",
     "pub_date_short": "07/28 09:27",
     "pub_date_rfc": "Tue, 28 Jul 2026 09:27:20 +0900",
@@ -540,7 +570,7 @@
     "timestamp": 1785198439
   },
   {
-    "id": "67972230",
+    "id": "17947302",
     "title": "ポケモンカードゲーム コレクションファイルプレミアム メガレックウザ",
     "asin": "B0GP9YPPTB",
     "price": "¥3,000",
