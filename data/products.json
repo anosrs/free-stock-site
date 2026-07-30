@@ -1,5 +1,20 @@
 [
   {
+    "id": "45289",
+    "title": "ジャンプスクエア (9月号)",
+    "asin": "B0H7G7ZCJS",
+    "price": "¥700",
+    "price_numeric": 700,
+    "image_url": "https://nexxjp.com/img/B0H7G7ZCJS.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0H7G7ZCJS?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H7G7ZCJS&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/45289",
+    "pub_date": "2026-07-31 00:21:27",
+    "pub_date_short": "07/31 00:21",
+    "pub_date_rfc": "Fri, 31 Jul 2026 00:21:27 +0900",
+    "timestamp": 1785424887
+  },
+  {
     "id": "6642",
     "title": "【純正品】ディスクドライブ(CFI-ZDD1J) PlayStation 5",
     "asin": "B0CKYKPKD3",
@@ -15,7 +30,7 @@
     "timestamp": 1785410689
   },
   {
-    "id": "47929257",
+    "id": "38239754",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
     "asin": "B0CY4H1TJD",
     "price": "¥1,950",
@@ -240,7 +255,7 @@
     "timestamp": 1785263231
   },
   {
-    "id": "33299154",
+    "id": "24806911",
     "title": "BEYBLADE X ベイブレードX BX-41 ラバーカスタムグリップ ガンメタVer.",
     "asin": "B0DWS96T4F",
     "price": "価格情報なし",
@@ -300,7 +315,7 @@
     "timestamp": 1785216898
   },
   {
-    "id": "66510376",
+    "id": "81031945",
     "title": "BEYBLADE X ベイブレードX BX-42 ラバーカスタムグリップ ブルーVer.",
     "asin": "B0DWSB1VDQ",
     "price": "¥2,081",
@@ -465,7 +480,7 @@
     "timestamp": 1785198446
   },
   {
-    "id": "28685698",
+    "id": "81404140",
     "title": "トンボ鉛筆 蛍光ペン 蛍コート80 黄色 WA-SC91",
     "asin": "B0016GJWKG",
     "price": "¥58",
@@ -540,7 +555,7 @@
     "timestamp": 1785198441
   },
   {
-    "id": "80693074",
+    "id": "32836348",
     "title": "ガンダムカードゲーム 1stアニバーサリー アーカイブ (HOBBY JAPAN MOOK)",
     "asin": "4798642320",
     "price": "価格情報なし",
