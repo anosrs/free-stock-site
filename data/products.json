@@ -1,5 +1,50 @@
 [
   {
+    "id": "15351",
+    "title": "タオル研究所 [ボリュームリッチ] #003 フェイスタオル チャコールグレー 5枚セット ホテル仕様 厚手 ふかふか ボリューム 高速吸水 耐久性 綿100% 480GSM JapanTechnology",
+    "asin": "B086WCH4FH",
+    "price": "¥1,890",
+    "price_numeric": 1890,
+    "image_url": "https://nexxjp.com/img/B086WCH4FH.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B086WCH4FH?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B086WCH4FH&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/15351",
+    "pub_date": "2026-08-01 19:56:30",
+    "pub_date_short": "08/01 19:56",
+    "pub_date_rfc": "Sat, 01 Aug 2026 19:56:30 +0900",
+    "timestamp": 1785581790
+  },
+  {
+    "id": "44717",
+    "title": "タカラトミー(TAKARA TOMY) デュエル･マスターズTCG DM26-RP2 逆札篇 第2弾 燃えろ禁断! 逆転のドギラゴン革命!! BOX",
+    "asin": "B0H1FVQ2SF",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0H1FVQ2SF.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0H1FVQ2SF?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H1FVQ2SF&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/44717",
+    "pub_date": "2026-08-01 19:56:29",
+    "pub_date_short": "08/01 19:56",
+    "pub_date_rfc": "Sat, 01 Aug 2026 19:56:29 +0900",
+    "timestamp": 1785581789
+  },
+  {
+    "id": "45841",
+    "title": "Hanes Tシャツ半袖SHIRO 綿100% 丸胴仕様 タグレス仕様 白クルーネックTシャツ アンダーウェアメンズ 1P HM1-X201メンズ",
+    "asin": "B0FHPGRQCY",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0FHPGRQCY.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0FHPGRQCY?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0FHPGRQCY&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/45841",
+    "pub_date": "2026-08-01 19:56:28",
+    "pub_date_short": "08/01 19:56",
+    "pub_date_rfc": "Sat, 01 Aug 2026 19:56:28 +0900",
+    "timestamp": 1785581788
+  },
+  {
     "id": "40353",
     "title": "KIOXIA(キオクシア) 旧東芝メモリ microSD 512GB UHS-I対応 Class10 microSDXC (転送速度50MB/s) 国内サポート正規品 メーカー保証3年 KTHN-MW512G",
     "asin": "B0BFH53W4M",
@@ -90,7 +135,7 @@
     "timestamp": 1785410689
   },
   {
-    "id": "32775313",
+    "id": "63073828",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
     "asin": "B0CY4H1TJD",
     "price": "¥1,950",
@@ -255,15 +300,15 @@
     "timestamp": 1785283469
   },
   {
-    "id": "45707",
+    "id": "10223351",
     "title": "KIOXIA(キオクシア)【日本製】SDカード 256GB SDXC UHS-I U3 V30 Class10 最大読出速度100MB/s 最大書込速度50MB/s 4K対応 国内正規品 メーカー保証5年 KLNEB256G",
     "asin": "B0CSJMN8ZK",
-    "price": null,
-    "price_numeric": 0,
-    "image_url": "https://nexxjp.com/img/B0CSJMN8ZK.jpg",
+    "price": "¥7,800",
+    "price_numeric": 7800,
+    "image_url": "https://tokkacat.com/wp-content/uploads/2026/07/51L2G9Wz6LL._SL500_.jpg",
     "amazon_url": "https://www.amazon.co.jp/dp/B0CSJMN8ZK?tag=nekonoki-22",
     "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0CSJMN8ZK&tag=nekonoki-22&Quantity.1=1",
-    "item_url": "https://nexxjp.com/product/45707",
+    "item_url": "https://tokkacat.com/b0csjmn8zk/",
     "pub_date": "2026-07-29 09:04:28",
     "pub_date_short": "07/29 09:04",
     "pub_date_rfc": "Wed, 29 Jul 2026 09:04:28 +0900",
@@ -315,7 +360,7 @@
     "timestamp": 1785263231
   },
   {
-    "id": "53527315",
+    "id": "53572865",
     "title": "BEYBLADE X ベイブレードX BX-41 ラバーカスタムグリップ ガンメタVer.",
     "asin": "B0DWS96T4F",
     "price": "価格情報なし",
@@ -375,7 +420,7 @@
     "timestamp": 1785216898
   },
   {
-    "id": "52361021",
+    "id": "77960420",
     "title": "BEYBLADE X ベイブレードX BX-42 ラバーカスタムグリップ ブルーVer.",
     "asin": "B0DWSB1VDQ",
     "price": "¥2,081",
@@ -450,7 +495,7 @@
     "timestamp": 1785198452
   },
   {
-    "id": "64878976",
+    "id": "32164479",
     "title": "【Amazon.co.jp限定】KISS N TELL 【Limited Edition Ver.】 – aespa (メガジャケ付)",
     "asin": "B0H4LQV29F",
     "price": "¥3,850",
