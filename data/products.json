@@ -1,5 +1,35 @@
 [
   {
+    "id": "45910",
+    "title": "ドラゴンボール Sparking! ZERO -PS5",
+    "asin": "B0D6BFQGRN",
+    "price": "¥3,209",
+    "price_numeric": 3209,
+    "image_url": "https://nexxjp.com/img/B0D6BFQGRN.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0D6BFQGRN?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0D6BFQGRN&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/45910",
+    "pub_date": "2026-08-02 19:58:59",
+    "pub_date_short": "08/02 19:58",
+    "pub_date_rfc": "Sun, 02 Aug 2026 19:58:59 +0900",
+    "timestamp": 1785668339
+  },
+  {
+    "id": "45909",
+    "title": "【Amazon.co.jp限定】Meta Quest 3S（128GB）購入で『Gorilla Tag』ゲームを無料プレゼント｜VRヘッドセット｜メモリが33％増加 ｜ 2倍のグラフィック処理性能 ｜ワイヤレスのVR体験",
+    "asin": "B0F8VJ57Q1",
+    "price": "¥59,400",
+    "price_numeric": 59400,
+    "image_url": "https://nexxjp.com/img/B0F8VJ57Q1.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0F8VJ57Q1?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0F8VJ57Q1&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/45909",
+    "pub_date": "2026-08-02 19:58:58",
+    "pub_date_short": "08/02 19:58",
+    "pub_date_rfc": "Sun, 02 Aug 2026 19:58:58 +0900",
+    "timestamp": 1785668338
+  },
+  {
     "id": "45896",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-08 ランダムブースターVol.7",
     "asin": "B0FCLZGNXC",
@@ -15,7 +45,7 @@
     "timestamp": 1785662779
   },
   {
-    "id": "67576739",
+    "id": "13216207",
     "title": "ゼブラ ジェルボールペン サラサクリップ0.5 P-JJ15-BK 黒",
     "asin": "B000IGXNR8",
     "price": "¥74",
@@ -195,7 +225,7 @@
     "timestamp": 1785410689
   },
   {
-    "id": "41979576",
+    "id": "73114010",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-00 ブースター ドライガースラッシュ 4-80P",
     "asin": "B0CY4H1TJD",
     "price": "¥1,950",
