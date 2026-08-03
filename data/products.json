@@ -1,5 +1,35 @@
 [
   {
+    "id": "37754",
+    "title": "\"BANDAI SPIRITS(バンダイ スピリッツ) プラコロ たんけんボックス 02【BOX】（1BOX:12個入り）\"",
+    "asin": "B0GQXQJHYB",
+    "price": "¥4,620",
+    "price_numeric": 4620,
+    "image_url": "https://nexxjp.com/img/B0GQXQJHYB.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0GQXQJHYB?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GQXQJHYB&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/37754",
+    "pub_date": "2026-08-04 01:04:38",
+    "pub_date_short": "08/04 01:04",
+    "pub_date_rfc": "Tue, 04 Aug 2026 01:04:38 +0900",
+    "timestamp": 1785773078
+  },
+  {
+    "id": "45991",
+    "title": "otona MUSE（オトナミューズ）2026年9月号増刊",
+    "asin": "B0H369J6KX",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0H369J6KX.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0H369J6KX?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H369J6KX&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/45991",
+    "pub_date": "2026-08-04 01:04:37",
+    "pub_date_short": "08/04 01:04",
+    "pub_date_rfc": "Tue, 04 Aug 2026 01:04:37 +0900",
+    "timestamp": 1785773077
+  },
+  {
     "id": "42935",
     "title": "BEYBLADE X ベイブレードX UX-11 スターター インパクトドレイク9-60LR",
     "asin": "B0DMSQ57X5",
@@ -120,7 +150,7 @@
     "timestamp": 1785662779
   },
   {
-    "id": "70764082",
+    "id": "39392281",
     "title": "ゼブラ ジェルボールペン サラサクリップ0.5 P-JJ15-BK 黒",
     "asin": "B000IGXNR8",
     "price": "¥74",
