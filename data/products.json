@@ -1,5 +1,20 @@
 [
   {
+    "id": "42935",
+    "title": "BEYBLADE X ベイブレードX UX-11 スターター インパクトドレイク9-60LR",
+    "asin": "B0DMSQ57X5",
+    "price": "¥2,420",
+    "price_numeric": 2420,
+    "image_url": "https://nexxjp.com/img/B0DMSQ57X5.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0DMSQ57X5?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DMSQ57X5&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/42935",
+    "pub_date": "2026-08-03 19:37:38",
+    "pub_date_short": "08/03 19:37",
+    "pub_date_rfc": "Mon, 03 Aug 2026 19:37:38 +0900",
+    "timestamp": 1785753458
+  },
+  {
     "id": "45963",
     "title": "Apple 11 インチ iPad (A16): 11 インチモデル、Liquid Retina ディスプレイ、128GB、Wi-Fi 6、12MP フロント/12MP バックカメラ、Touch ID、一日中使えるバ ッテリー - ピンク",
     "asin": "B0DZ8J8TR2",
@@ -105,7 +120,7 @@
     "timestamp": 1785662779
   },
   {
-    "id": "64153870",
+    "id": "34197430",
     "title": "ゼブラ ジェルボールペン サラサクリップ0.5 P-JJ15-BK 黒",
     "asin": "B000IGXNR8",
     "price": "¥74",
