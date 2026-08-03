@@ -1,5 +1,20 @@
 [
   {
+    "id": "45963",
+    "title": "Apple 11 インチ iPad (A16): 11 インチモデル、Liquid Retina ディスプレイ、128GB、Wi-Fi 6、12MP フロント/12MP バックカメラ、Touch ID、一日中使えるバ ッテリー - ピンク",
+    "asin": "B0DZ8J8TR2",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0DZ8J8TR2.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0DZ8J8TR2?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DZ8J8TR2&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/45963",
+    "pub_date": "2026-08-03 15:54:35",
+    "pub_date_short": "08/03 15:54",
+    "pub_date_rfc": "Mon, 03 Aug 2026 15:54:35 +0900",
+    "timestamp": 1785740075
+  },
+  {
     "id": "45941",
     "title": "FINAL FANTASY TRADING CARD GAME SPECIAL COLLECTION FINAL FANTASY X",
     "asin": "B0HC9KFF82",
@@ -90,7 +105,7 @@
     "timestamp": 1785662779
   },
   {
-    "id": "89890970",
+    "id": "64153870",
     "title": "ゼブラ ジェルボールペン サラサクリップ0.5 P-JJ15-BK 黒",
     "asin": "B000IGXNR8",
     "price": "¥74",
