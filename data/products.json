@@ -1,5 +1,20 @@
 [
   {
+    "id": "46068",
+    "title": "最強ジャンプ (9月号)",
+    "asin": "B0H5DWN31G",
+    "price": "¥710",
+    "price_numeric": 710,
+    "image_url": "https://nexxjp.com/img/B0H5DWN31G.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0H5DWN31G?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H5DWN31G&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/46068",
+    "pub_date": "2026-08-04 22:19:01",
+    "pub_date_short": "08/04 22:19",
+    "pub_date_rfc": "Tue, 04 Aug 2026 22:19:01 +0900",
+    "timestamp": 1785849541
+  },
+  {
     "id": "44426",
     "title": "[バンダイ(BANDAI)] DIGIVICE Ver.REVIVAL 石田ヤマトカラー 対象年齢 8 才以上 デジモンアドベンチャー（DIGIMON ADVENTURE）",
     "asin": "B0H4PQ29JS",
@@ -30,7 +45,7 @@
     "timestamp": 1785834588
   },
   {
-    "id": "63725469",
+    "id": "37465183",
     "title": "BEYBLADE X ベイブレードX BX-40 ワインダーランチャーL",
     "asin": "B0DWSBHQWD",
     "price": "価格情報なし",
@@ -195,7 +210,7 @@
     "timestamp": 1785662779
   },
   {
-    "id": "16630871",
+    "id": "83544094",
     "title": "ゼブラ ジェルボールペン サラサクリップ0.5 P-JJ15-BK 黒",
     "asin": "B000IGXNR8",
     "price": "¥74",
