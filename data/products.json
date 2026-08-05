@@ -1,5 +1,50 @@
 [
   {
+    "id": "41307",
+    "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-09 ベイバトルパス",
+    "asin": "B0C52SMHWN",
+    "price": "¥3,300",
+    "price_numeric": 3300,
+    "image_url": "https://nexxjp.com/img/B0C52SMHWN.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0C52SMHWN?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0C52SMHWN&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/41307",
+    "pub_date": "2026-08-06 07:37:09",
+    "pub_date_short": "08/06 07:37",
+    "pub_date_rfc": "Thu, 06 Aug 2026 07:37:09 +0900",
+    "timestamp": 1785969429
+  },
+  {
+    "id": "46216",
+    "title": "BEYBLADE X ベイブレードX CX-02 スターター ウィザードアーク R4-55LO",
+    "asin": "B0DWSRHP7J",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0DWSRHP7J.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0DWSRHP7J?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DWSRHP7J&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/46216",
+    "pub_date": "2026-08-06 07:37:06",
+    "pub_date_short": "08/06 07:37",
+    "pub_date_rfc": "Thu, 06 Aug 2026 07:37:06 +0900",
+    "timestamp": 1785969426
+  },
+  {
+    "id": "11598361",
+    "title": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
+    "asin": "B0DWS7DDK4",
+    "price": "¥4,200",
+    "price_numeric": 4200,
+    "image_url": "https://tokkacat.com/wp-content/uploads/2026/08/51s7cprmsEL._SL500_.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0DWS7DDK4?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DWS7DDK4&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://tokkacat.com/b0dws7ddk4/",
+    "pub_date": "2026-08-06 07:24:38",
+    "pub_date_short": "08/06 07:24",
+    "pub_date_rfc": "Thu, 06 Aug 2026 07:24:38 +0900",
+    "timestamp": 1785968678
+  },
+  {
     "id": "41830",
     "title": "BEYBLADE X ベイブレードX UX-03 ブースター ウィザードロッド 5-70DB",
     "asin": "B0CV7D5B6K",
@@ -30,7 +75,7 @@
     "timestamp": 1785965473
   },
   {
-    "id": "67202271",
+    "id": "40970805",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-10 ブースター ウルフハントF0-60DB",
     "asin": "B0FV74J4H5",
     "price": "¥2,700",
@@ -45,7 +90,7 @@
     "timestamp": 1785963590
   },
   {
-    "id": "46364249",
+    "id": "77606899",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-11 ランチャーグリップ",
     "asin": "B0C533Q31X",
     "price": "¥1,500",
@@ -90,7 +135,7 @@
     "timestamp": 1785888268
   },
   {
-    "id": "34685978",
+    "id": "69903058",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-09 スターター ソルエクリプス D5-70TK",
     "asin": "B0FLCFNPF2",
     "price": "¥3,300",
@@ -150,7 +195,7 @@
     "timestamp": 1785834588
   },
   {
-    "id": "22530638",
+    "id": "68187790",
     "title": "BEYBLADE X ベイブレードX BX-40 ワインダーランチャーL",
     "asin": "B0DWSBHQWD",
     "price": "価格情報なし",
