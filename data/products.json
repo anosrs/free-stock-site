@@ -1,5 +1,20 @@
 [
   {
+    "id": "18254",
+    "title": "BEYBLADE X ベイブレードX UX-09 スターター サムライセイバー2-70L",
+    "asin": "B0DJQQDFPS",
+    "price": "¥3,300",
+    "price_numeric": 3300,
+    "image_url": "https://nexxjp.com/img/B0DJQQDFPS.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0DJQQDFPS?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0DJQQDFPS&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/18254",
+    "pub_date": "2026-08-07 21:04:59",
+    "pub_date_short": "08/07 21:04",
+    "pub_date_rfc": "Fri, 07 Aug 2026 21:04:59 +0900",
+    "timestamp": 1786104299
+  },
+  {
     "id": "46388",
     "title": "mini（ミニ）2026年9月号",
     "asin": "B0H6ZM97G8",
@@ -255,7 +270,7 @@
     "timestamp": 1785969429
   },
   {
-    "id": "64320364",
+    "id": "91733303",
     "title": "BEYBLADE X ベイブレードX CX-02 スターター ウィザードアーク R4-55LO",
     "asin": "B0DWSRHP7J",
     "price": "¥3,940",
@@ -270,7 +285,7 @@
     "timestamp": 1785969426
   },
   {
-    "id": "84291952",
+    "id": "90751113",
     "title": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
     "asin": "B0DWS7DDK4",
     "price": "¥4,200",
