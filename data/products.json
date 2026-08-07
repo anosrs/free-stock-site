@@ -1,5 +1,20 @@
 [
   {
+    "id": "46431",
+    "title": "タカラトミー(TAKARA TOMY) CX-14 スターター ナイトフォートレスGV8-70UN",
+    "asin": "B0GMDYS21K",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0GMDYS21K.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0GMDYS21K?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0GMDYS21K&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/46431",
+    "pub_date": "2026-08-08 04:13:39",
+    "pub_date_short": "08/08 04:13",
+    "pub_date_rfc": "Sat, 08 Aug 2026 04:13:39 +0900",
+    "timestamp": 1786130019
+  },
+  {
     "id": "18254",
     "title": "BEYBLADE X ベイブレードX UX-09 スターター サムライセイバー2-70L",
     "asin": "B0DJQQDFPS",
@@ -285,7 +300,7 @@
     "timestamp": 1785969426
   },
   {
-    "id": "62201902",
+    "id": "12879356",
     "title": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
     "asin": "B0DWS7DDK4",
     "price": "¥4,200",
