@@ -1,5 +1,20 @@
 [
   {
+    "id": "46388",
+    "title": "mini（ミニ）2026年9月号",
+    "asin": "B0H6ZM97G8",
+    "price": null,
+    "price_numeric": 0,
+    "image_url": "https://nexxjp.com/img/B0H6ZM97G8.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B0H6ZM97G8?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H6ZM97G8&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/46388",
+    "pub_date": "2026-08-07 18:27:30",
+    "pub_date_short": "08/07 18:27",
+    "pub_date_rfc": "Fri, 07 Aug 2026 18:27:30 +0900",
+    "timestamp": 1786094850
+  },
+  {
     "id": "34185",
     "title": "【任天堂ライセンス商品】Samsung microSD Express Card 256GB for Nintendo Switch 2（サムスン マイクロSDエクスプレスカード 256GB）",
     "asin": "B0F54NFW3Y",
@@ -240,7 +255,7 @@
     "timestamp": 1785969429
   },
   {
-    "id": "77540783",
+    "id": "81470143",
     "title": "BEYBLADE X ベイブレードX CX-02 スターター ウィザードアーク R4-55LO",
     "asin": "B0DWSRHP7J",
     "price": "¥3,940",
@@ -255,7 +270,7 @@
     "timestamp": 1785969426
   },
   {
-    "id": "35551358",
+    "id": "20941048",
     "title": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
     "asin": "B0DWS7DDK4",
     "price": "¥4,200",
@@ -300,7 +315,7 @@
     "timestamp": 1785965473
   },
   {
-    "id": "83720040",
+    "id": "56658810",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX CX-10 ブースター ウルフハントF0-60DB",
     "asin": "B0FV74J4H5",
     "price": "¥2,700",
