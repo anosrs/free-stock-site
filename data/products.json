@@ -1,5 +1,20 @@
 [
   {
+    "id": "92",
+    "title": "富士フイルム(FUJIFILM) インスタントカメラ \"チェキスクエア\"instax SQUARE SQ1 グレイシャーブルー INS SQ 1 BLUE",
+    "asin": "B08LPNHPPL",
+    "price": "¥17,156",
+    "price_numeric": 17156,
+    "image_url": "https://nexxjp.com/img/B08LPNHPPL.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B08LPNHPPL?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B08LPNHPPL&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/92",
+    "pub_date": "2026-08-08 12:04:05",
+    "pub_date_short": "08/08 12:04",
+    "pub_date_rfc": "Sat, 08 Aug 2026 12:04:05 +0900",
+    "timestamp": 1786158245
+  },
+  {
     "id": "46431",
     "title": "タカラトミー(TAKARA TOMY) CX-14 スターター ナイトフォートレスGV8-70UN",
     "asin": "B0GMDYS21K",
@@ -300,7 +315,7 @@
     "timestamp": 1785969426
   },
   {
-    "id": "46553699",
+    "id": "24224291",
     "title": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
     "asin": "B0DWS7DDK4",
     "price": "¥4,200",
