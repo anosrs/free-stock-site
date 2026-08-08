@@ -165,7 +165,7 @@
     "timestamp": 1786076052
   },
   {
-    "id": "70335720",
+    "id": "84109616",
     "title": "[ジェラート ピケ] ドラゴンクエスト タンブラー PWGG264619 ユニセックス BLU F",
     "asin": "B0H7VNKFB8",
     "price": "¥3,960",
@@ -180,7 +180,7 @@
     "timestamp": 1786076051
   },
   {
-    "id": "65142273",
+    "id": "39862408",
     "title": "[ジェラート ピケ] 【ドラゴンクエスト】【ユニセックス】ベビーパンサーパーカ PUNT264040 ユニセックス BEG (S-M)",
     "asin": "B0H7VZQFCX",
     "price": "¥14,960",
@@ -195,7 +195,7 @@
     "timestamp": 1786076050
   },
   {
-    "id": "21106222",
+    "id": "82667972",
     "title": "[ジェラート ピケ] 【ドラゴンクエスト】【Sleep】わたぼうお昼寝クッション PSGG264848 ユニセックス OWHT F",
     "asin": "B0H7W4YSRR",
     "price": "¥8,910",
@@ -318,8 +318,8 @@
     "id": "41307",
     "title": "タカラトミー(TAKARA TOMY) BEYBLADE X ベイブレードX BX-09 ベイバトルパス",
     "asin": "B0C52SMHWN",
-    "price": "¥3,300",
-    "price_numeric": 3300,
+    "price": null,
+    "price_numeric": 0,
     "image_url": "https://nexxjp.com/img/B0C52SMHWN.jpg",
     "amazon_url": "https://www.amazon.co.jp/dp/B0C52SMHWN?tag=nekonoki-22",
     "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0C52SMHWN&tag=nekonoki-22&Quantity.1=1",
@@ -345,7 +345,7 @@
     "timestamp": 1785969426
   },
   {
-    "id": "61349186",
+    "id": "70761104",
     "title": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
     "asin": "B0DWS7DDK4",
     "price": "¥4,200",
