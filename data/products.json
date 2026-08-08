@@ -1,5 +1,20 @@
 [
   {
+    "id": "17723",
+    "title": "Canon コンパクトデジタルカメラ PowerShot G7 X Mark III ブラック 1.0型センサー/F1.8レンズ/光学4.2倍ズーム PSG7XMARKIIIBK",
+    "asin": "B07V6DHHRX",
+    "price": "¥188,500",
+    "price_numeric": 188500,
+    "image_url": "https://nexxjp.com/img/B07V6DHHRX.jpg",
+    "amazon_url": "https://www.amazon.co.jp/dp/B07V6DHHRX?tag=nekonoki-22",
+    "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B07V6DHHRX&tag=nekonoki-22&Quantity.1=1",
+    "item_url": "https://nexxjp.com/product/17723",
+    "pub_date": "2026-08-09 01:53:29",
+    "pub_date_short": "08/09 01:53",
+    "pub_date_rfc": "Sun, 09 Aug 2026 01:53:29 +0900",
+    "timestamp": 1786208009
+  },
+  {
     "id": "44377",
     "title": "富士フイルム(FUJIFILM) デジタルカメラ X100Ⅵ シルバー X100Ⅵ-S JP 日英二言語モデル",
     "asin": "B0DT3T92L3",
@@ -150,22 +165,22 @@
     "timestamp": 1786076053
   },
   {
-    "id": "46348",
-    "title": "[ジェラート ピケ] 【ドラゴンクエスト】タンブラー PWGG264619 ユニセックス",
+    "id": "46300161",
+    "title": "[ジェラート ピケ] ドラゴンクエスト タンブラー PWGG264619 ユニセックス PNK F",
     "asin": "B0H7W2VQSL",
     "price": "¥3,960",
     "price_numeric": 3960,
-    "image_url": "https://nexxjp.com/img/B0H7W2VQSL.jpg",
+    "image_url": "https://tokkacat.com/wp-content/uploads/2026/08/31c02hQwHcL._SL500_.jpg",
     "amazon_url": "https://www.amazon.co.jp/dp/B0H7W2VQSL?tag=nekonoki-22",
     "cart_url": "https://www.amazon.co.jp/gp/aws/cart/add.html?ASIN.1=B0H7W2VQSL&tag=nekonoki-22&Quantity.1=1",
-    "item_url": "https://nexxjp.com/product/46348",
+    "item_url": "https://tokkacat.com/b0h7w2vqsl/",
     "pub_date": "2026-08-07 13:14:12",
     "pub_date_short": "08/07 13:14",
     "pub_date_rfc": "Fri, 07 Aug 2026 13:14:12 +0900",
     "timestamp": 1786076052
   },
   {
-    "id": "87047589",
+    "id": "36568916",
     "title": "[ジェラート ピケ] ドラゴンクエスト タンブラー PWGG264619 ユニセックス BLU F",
     "asin": "B0H7VNKFB8",
     "price": "¥3,960",
@@ -180,7 +195,7 @@
     "timestamp": 1786076051
   },
   {
-    "id": "11832875",
+    "id": "32412552",
     "title": "[ジェラート ピケ] 【ドラゴンクエスト】【ユニセックス】ベビーパンサーパーカ PUNT264040 ユニセックス BEG (S-M)",
     "asin": "B0H7VZQFCX",
     "price": "¥14,960",
@@ -195,7 +210,7 @@
     "timestamp": 1786076050
   },
   {
-    "id": "19293043",
+    "id": "40997423",
     "title": "[ジェラート ピケ] 【ドラゴンクエスト】【Sleep】わたぼうお昼寝クッション PSGG264848 ユニセックス OWHT F",
     "asin": "B0H7W4YSRR",
     "price": "¥8,910",
@@ -345,7 +360,7 @@
     "timestamp": 1785969426
   },
   {
-    "id": "82033834",
+    "id": "29709528",
     "title": "BEYBLADE X ベイブレードX CX-01 スターター ドランブレイブ S6-60V",
     "asin": "B0DWS7DDK4",
     "price": "¥4,200",
